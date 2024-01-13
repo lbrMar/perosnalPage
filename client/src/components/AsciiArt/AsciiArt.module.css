@@ -1,0 +1,10 @@
+.asciiArtContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.asciiPre {
+  font-size: 6px;
+  margin: 0px;
+}

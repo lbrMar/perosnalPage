@@ -1,5 +1,5 @@
 import styles from './App.module.css'
-import AsciiArt from './components/AsciiArt'
+import AsciiArt from './components/AsciiArt/AsciiArt'
 
 function App() {
 
