@@ -1,0 +1,61 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --primary-bg: #22092C;
+  --primary-text: #872341;
+  --accent-color-1: #BE3144;
+  --accent-color-2: #F05941;
+  --accent-color-1-opacity: #BE314480;
+  --accent-color-2-opacity: #F0594180;
+}
+
+* {
+  min-width: 0px;
+}
+
+body {
+  background-color: var(--primary-bg);
+  background-image: url('../dist/images/retroComp.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--primary-text);
+  height: 100vh;
+  margin: 0px;
+}
+
+/********************************** button **********************************/
+.button {
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: 1rem;
+}
+
+.primary {
+  background-color: var(--accent-color-1);
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: var(--accent-color-1);
+}
+
+.secondary {
+  background-color: var(--accent-color-2);
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: var(--accent-color-2);
+}
+
+.outline {
+  background-color: transparent;
+  border: 2px solid #3498db;
+  color: #3498db;
+}
