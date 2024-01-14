@@ -1,0 +1,6 @@
+@import '../../../styles/main.module.css';
+
+.mainContainer {
+  composes: pageContainer from '../../../styles/main.module.css';
+  background-image: url('../dist/images/surftronaut.jpg');
+}

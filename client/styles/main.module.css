@@ -32,8 +32,15 @@ body {
   align-items: center;
 }
 
-/****************************** main container ******************************/
+/****************************** main/page container ******************************/
 .mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageContainer {
   background-image: url('../dist/images/surftronaut.jpg');
   background-repeat: no-repeat;
   background-position: center;
