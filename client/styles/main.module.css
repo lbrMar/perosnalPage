@@ -1,27 +1,48 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  --primary-bg: #22092C;
-  --primary-text: #872341;
-  --accent-color-1: #BE3144;
-  --accent-color-2: #F05941;
-  --accent-color-1-opacity: #BE314480;
-  --accent-color-2-opacity: #F0594180;
+  --primary-bg: #1D2B53;
+  --primary-text: #FAEF5D;
+  --primary-accent-color-1: #FF004D;
+  --primary-accent-color-2: #7E2553;
+  --primary-border-color: #FAEF5D;
+  --secondary-bg: #22092C;
+  --secondary-text: #F05941;
+  --secondary-accent-color-1: #BE3144;
+  --secondary-accent-color-2: #872341;
 }
 
 * {
   min-width: 0px;
 }
 
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
-  background-color: var(--primary-bg);
-  background-image: url('../dist/images/retroComp.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #FF004D;
   color: var(--primary-text);
+  box-sizing: border-box;
   height: 100vh;
   margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/****************************** main container ******************************/
+.mainContainer {
+  background-image: url('../dist/images/surftronaut.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 95vh;
+  width: 90vw;
+  max-width: 1186px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
 }
 
 /********************************** button **********************************/
@@ -31,31 +52,31 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+  transition: background-color 0.1s ease;
   margin: 1rem;
 }
 
 .primary {
-  background-color: var(--accent-color-1);
-  color: #fff;
+  background-color: var(--primary-accent-color-2);
+  color: var(--primary-text);
+  font-weight: 800;
 }
 
 .primary:hover {
-  background-color: var(--accent-color-1);
+  background-color: var(--primary-accent-color-1);
+  color: var(--primary-text);
+  font-weight: 800;
 }
 
 .secondary {
-  background-color: var(--accent-color-2);
-  color: #fff;
+  background-color: var(--secondary-accent-color-1);
+  color: var(--primary-text);
+  font-weight: 600;
 }
 
-.primary:hover {
-  background-color: var(--accent-color-2);
-}
-
-.outline {
-  background-color: transparent;
-  border: 2px solid #3498db;
-  color: #3498db;
+.secondary:hover {
+  background-color: var(--secondary-accent-color-2);
+  color: var(--primary-text);
+  font-weight: 600;
 }
