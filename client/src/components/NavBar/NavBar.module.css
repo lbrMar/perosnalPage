@@ -1,0 +1,26 @@
+@import '../../../styles/main.module.css';
+
+.flexRowContainer {
+  composes: flexRowContainer from '../../../styles/main.module.css';
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  background-color: var(--primary-bg);
+  width: 97vw;
+  padding: 0px 1rem 0px 1rem;
+  margin: 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--primary-border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 0px;
+}

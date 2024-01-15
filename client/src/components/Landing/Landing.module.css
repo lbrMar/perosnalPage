@@ -9,4 +9,6 @@
 
 .displayContainer {
   composes: displayContainer from '../../../styles/main.module.css';
+  padding: 1rem; 
+  margin: 4rem 1rem 1rem 1rem;
 }
