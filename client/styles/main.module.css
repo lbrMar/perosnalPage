@@ -25,14 +25,15 @@ body {
   background-color: #FF004D;
   color: var(--primary-text);
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   margin: 0px;
   padding: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease;
 }
-
+ 
 /******************************** containers ********************************/
 
 .mainContainer {
@@ -40,6 +41,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .pageContainer {

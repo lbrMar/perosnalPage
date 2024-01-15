@@ -1,7 +1,10 @@
+import styles from './About.module.css'
+
 function About() {
 
   return (
-    <div></div>
+    <div className={styles.pageContainer}>
+    </div>
   )
 }
 

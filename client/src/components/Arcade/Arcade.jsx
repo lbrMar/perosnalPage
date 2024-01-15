@@ -1,8 +1,10 @@
+import styles from './Arcade.module.css'
 
 function Arcade() {
 
   return (
-    <div></div>
+    <div className={styles.pageContainer}>
+    </div>
   )
 }
 
