@@ -1,0 +1,23 @@
+@import '../../../../styles/main.module.css';
+
+.flexColumnContainer {
+  composes: flexColumnContainer from '../../../../styles/main.module.css';
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: 0.8px;
+}
+
+.pTitle {
+  font-weight: 900;
+}
+
+.pInfo {
+  color: var(--secondary-text);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

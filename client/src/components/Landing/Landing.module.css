@@ -1,6 +1,12 @@
 @import '../../../styles/main.module.css';
 
-.mainContainer {
+.pageContainer {
   composes: pageContainer from '../../../styles/main.module.css';
   background-image: url('../dist/images/surftronaut.jpg');
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.displayContainer {
+  composes: displayContainer from '../../../styles/main.module.css';
 }
