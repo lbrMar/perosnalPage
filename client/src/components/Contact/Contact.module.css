@@ -4,3 +4,8 @@
   composes: pageContainer from '../../../styles/main.module.css';
   background-image: url('../../../dist/images/personalPageBG4.jpg');
 }
+
+.footer {
+  font-weight: 700;
+  font-style: italic;
+}

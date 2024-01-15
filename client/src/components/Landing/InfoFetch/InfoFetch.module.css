@@ -9,10 +9,14 @@
 
 .pTitle {
   font-weight: 900;
+  font-size: 1.5rem;
 }
 
 .pInfo {
-  color: var(--secondary-text);
+  color: #FFF5E0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-style: italic;
 }
 
 .textContainer {
@@ -20,4 +24,6 @@
   flex-direction: row;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

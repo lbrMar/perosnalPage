@@ -1,8 +1,6 @@
-// Import required modules
 const express = require('express')
 const path = require('path')
 
-// Create an express application
 const app = express()
 const port = process.env.PORT || 3000
 

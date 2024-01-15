@@ -1,15 +1,15 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --primary-bg: #1D2B53;
+  --primary-bg: #1D2B5399;
   --primary-text: #FAEF5D;
   --primary-accent-color-1: #FF004D;
   --primary-accent-color-2: #7E2553;
-  --primary-border-color: #FAEF5D;
+  --primary-border-color: #000000;
   --secondary-bg: #22092C;
   --secondary-text: #F05941;
   --secondary-accent-color-1: #BE3144;
   --secondary-accent-color-2: #872341;
-  --display-bg: #1D2B53;
+  --display-bg: #1D2B5399;
 }
 
 * {
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-color: #FF004D;
+  background-color: var(--primary-accent-color-1);
   color: var(--primary-text);
   box-sizing: border-box;
   height: 100%;
@@ -60,7 +60,7 @@ body {
   display: flex;
   flex-direction: row;
   background-color: var(--display-bg);
-  border: 1px solid var(--primary-border-color);
+  border: 2px solid var(--primary-border-color);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
@@ -74,6 +74,20 @@ body {
 .flexRowContainer {
   display: flex;
   flex-direction: row;
+}
+
+/***************************** fixed conatiners *****************************/
+
+.fixedNavTop {
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  border: 2px solid var(--primary-border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 /********************************** button **********************************/

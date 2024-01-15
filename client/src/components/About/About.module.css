@@ -3,4 +3,12 @@
 .pageContainer {
   composes: pageContainer from '../../../styles/main.module.css';
   background-image: url('../../../dist/images/personalPageBG2.jpg');
+  justify-content: center;
+  align-items: center;
 } 
+
+.displayContainer {
+  composes: displayContainer from '../../../styles/main.module.css';
+  height: 70vh;
+  width: 50vw;
+}
