@@ -5,7 +5,11 @@ function About() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.displayContainer}>
-        <p>Something</p>
+        <div className={styles.manContainer}>
+          <h1></h1>
+        </div>
+        <div className={styles.termContainer}>
+        </div>
       </div>
     </div>
   )
