@@ -50,7 +50,10 @@ function ScrollButton() {
         <div
           className={styles.scrollButton}
           onClick={scrollNextToSection}>
-          <img src={downArrowIcon} alt='DOWN' />
+          <img 
+            className={styles.icon}
+            src={downArrowIcon} 
+            alt='DOWN' />
         </div>
       )}
     </div>
