@@ -9,8 +9,6 @@
 
 .displayContainer {
   composes: displayContainer from '../../../styles/main.module.css';
-  height: 70vh;
-  width: 50vw;
 }
 
 .footer {

@@ -3,16 +3,15 @@
 .pageContainer {
   composes: pageContainer from '../../../styles/main.module.css';
   background-image: url('../dist/images/surftronaut.jpg');
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .displayContainer {
   composes: displayContainer from '../../../styles/main.module.css';
   padding: 1rem; 
-  margin: 6rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
   flex-wrap: wrap;
   gap: 1rem;
-  height: 70vh;
-  width: 50vw;
 }
