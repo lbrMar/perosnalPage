@@ -6,7 +6,12 @@ function ScrollButton() {
   const [isVisible, setIsVisible] = useState(true)
   const [currentSection, setCurrentSection] = useState(0)
 
-  const sectionHeights = [0, window.innerHeight, window.innerHeight * 2, window.innerHeight * 2.3]
+  const sectionHeights = [
+    0, 
+    window.innerHeight, 
+    window.innerHeight * 2, 
+    window.innerHeight * 2.3
+  ]
 
   const determineCurrentSection = () => {
     const scrollHeight = window.scrollY
@@ -20,7 +25,7 @@ function ScrollButton() {
     return sectionHeights.length - 1
   }
 
-  const scrollNextToSection = () => {
+  const scrollToNextSection = () => {
     const nextSection = (currentSection + 1) * window.innerHeight
 
     window.scrollTo({
@@ -49,7 +54,7 @@ function ScrollButton() {
       {isVisible && (
         <div
           className={styles.scrollButton}
-          onClick={scrollNextToSection}>
+          onClick={scrollToNextSection}>
           <img 
             className={styles.icon}
             src={downArrowIcon} 

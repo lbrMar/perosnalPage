@@ -16,7 +16,8 @@ function ScrollColorChange() {
       
       if (scrollY < (screenHeight / 2)) {
         setBackgroundColor(bg1)
-      } else if (scrollY >= (screenHeight / 2) && scrollY < (screenHeight + halfSH)) {
+      } else if (scrollY >= (screenHeight / 2) 
+          && scrollY < (screenHeight + halfSH)) {
         setBackgroundColor(bg2)
       } else if (scrollY >= (screenHeight + halfSH)
           && (scrollY < ((screenHeight * 2) + halfSH))) {

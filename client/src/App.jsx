@@ -2,6 +2,7 @@ import styles from './App.module.css'
 
 /***************************** import components *****************************/
 import ScrollColorChange from './scrollEffects/ScrollColorChange'
+import ScrollSlowOnY from './scrollEffects/ScrollSlowOnY'
 import LoadingPage from './components/LoadingPage/LoadingPage'
 import NavBar from './components/NavBar/NavBar'
 import Landing from './components/Landing/Landing'
@@ -32,6 +33,7 @@ function App() {
       ) : (
         <div className={styles.mainContainer}>
           <ScrollColorChange />
+          <ScrollSlowOnY />
           <NavBar />
           <Landing />
           <About />
