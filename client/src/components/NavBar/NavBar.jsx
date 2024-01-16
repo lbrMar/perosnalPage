@@ -7,11 +7,11 @@ function NavBar() {
       <div className={styles.flexRowContainer}>
         <p>{`@lbrm`}</p>
         <div className={styles.linksContainer}>
-          <p>{`// home`}</p>
-          <p>{`// about`}</p>
-          <p>{`// arcade`}</p>
-          <p>{`// contact`}</p>
-          <p>{`// git`}</p>
+          <p className={styles.linkItem}>{`// home`}</p>
+          <p className={styles.linkItem}>{`// about`}</p>
+          <p className={styles.linkItem}>{`// arcade`}</p>
+          <p className={styles.linkItem}>{`// contact`}</p>
+          <p className={styles.linkItem}>{`// git`}</p>
         </div>
       </div>
     </div>

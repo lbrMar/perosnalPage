@@ -19,3 +19,13 @@
   font-style: italic;
   font-size: 1.2rem;
 }
+
+.linkItem {
+  font-size: 1.2rem;
+}
+
+.linkItem:hover {
+  font-style: italic;
+  font-weight: 700;
+  text-shadow: -3px 3px #FF004D;
+}
