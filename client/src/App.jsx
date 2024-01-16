@@ -1,7 +1,7 @@
 import styles from './App.module.css'
 
 /***************************** import components *****************************/
-import ScrollColorChange from './ScrollColorChange'
+import ScrollColorChange from './scrollEffects/ScrollColorChange'
 import LoadingPage from './components/LoadingPage/LoadingPage'
 import NavBar from './components/NavBar/NavBar'
 import Landing from './components/Landing/Landing'
