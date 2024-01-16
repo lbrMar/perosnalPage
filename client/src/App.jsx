@@ -9,6 +9,7 @@ import Landing from './components/Landing/Landing'
 import About from './components/About/About'
 import Arcade from './components/Arcade/Arcade'
 import Contact from './components/Contact/Contact'
+import HomeButton from './components/HomeButton/HomeButton'
 import Footer from './components/Footer/Footer'
 
 /******************************* import hooks *******************************/
@@ -39,6 +40,7 @@ function App() {
           <About />
           <Arcade />
           <Contact />
+            <HomeButton />
           <Footer />
         </div>
       )}
