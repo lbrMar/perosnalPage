@@ -66,6 +66,7 @@ body {
   padding: 1rem;
   height: 70%;
   width: 85%;
+  backdrop-filter: blur(8px);
 }
 
 .flexColumnContainer {
@@ -90,6 +91,7 @@ body {
   border: 2px solid var(--primary-border-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  backdrop-filter: blur(8px);
 }
 
 /********************************** button **********************************/

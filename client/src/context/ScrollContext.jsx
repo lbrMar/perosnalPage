@@ -38,7 +38,7 @@ const ScrollProvider = ({ children }) => {
   }
 
   const showScrollDownBtn = (scrollPosition, sectionHeights, numOfSections) => {
-    if (scrollPosition > sectionHeights[numOfSections - 2] + 10) {
+    if (scrollPosition > sectionHeights[numOfSections - 2] + 50) {
       return false
     }
     return true
