@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
+import { useScrollContext } from '../context'
 
-function ScrollSlowOnHeight() {
+function ScrollSlowOnY() {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [scrollDirection, setScrollDirection] = useState('down')
   const [currentSection, setCurrentSection] = useState(0)
+  const { scrollInfo } = useScrollContext()
+  const { allowScrollHandling } = scrollInfo
 
   const scrollOffset = 100
 
@@ -45,6 +48,10 @@ function ScrollSlowOnHeight() {
   }
 
   useEffect(() => {
+    if (!allowScrollHandling) {
+      return
+    }
+
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY
       const newSection = determineCurrentSection()
@@ -59,13 +66,17 @@ function ScrollSlowOnHeight() {
 
       setScrollPosition(currentScrollPosition)
 
-      if (scrollDirection === 'down' 
-        && currentScrollPosition >= sectionHeights[currentSection + 1] - scrollOffset) {
+      if (
+        scrollDirection === 'down' &&
+        currentScrollPosition >= sectionHeights[currentSection + 1] - scrollOffset
+      ) {
         scrollToNextSection()
       }
 
-      if (scrollDirection === 'up' 
-        && currentScrollPosition <= sectionHeights[currentSection] + scrollOffset) {
+      if (
+        scrollDirection === 'up' &&
+        currentScrollPosition <= sectionHeights[currentSection] + scrollOffset
+      ) {
         scrollToPrevSection()
       }
     }
@@ -75,9 +86,9 @@ function ScrollSlowOnHeight() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [scrollDirection, scrollPosition, currentSection])
+  }, [scrollDirection, scrollPosition, currentSection, allowScrollHandling])
 
-  return <div></div>
+  return null
 }
 
-export default ScrollSlowOnHeight
+export default ScrollSlowOnY

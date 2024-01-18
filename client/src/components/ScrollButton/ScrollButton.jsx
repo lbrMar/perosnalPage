@@ -1,57 +1,37 @@
 import downArrowIcon from '../../../dist/assets/icons8-double-down-64.png'
 import styles from './ScrollButton.module.css'
-import { useState, useEffect } from 'react'
+import { useScrollContext } from '../../context'
 
 function ScrollButton() {
-  const [isVisible, setIsVisible] = useState(true)
-  const [currentSection, setCurrentSection] = useState(0)
-
-  const sectionHeights = [
-    0, 
-    window.innerHeight, 
-    window.innerHeight * 2, 
-    window.innerHeight * 2.3
-  ]
-
-  const determineCurrentSection = () => {
-    const scrollHeight = window.scrollY
-
-    for (let i = 0; i < sectionHeights.length - 1; i++) {
-      if (scrollHeight < sectionHeights[i + 1]) {
-        return i
-      }
-    }
-
-    return sectionHeights.length - 1
-  }
+  const {
+    disableScrollHandling,
+    enableScrollHandling,
+    updateScrollInfo,
+    scrollInfo, 
+  } = useScrollContext()
+  const { 
+    scrollSection, 
+    visibleScrollDown, 
+    scrollDirection,
+  } = scrollInfo
 
   const scrollToNextSection = () => {
-    const nextSection = (currentSection + 1) * window.innerHeight
+    updateScrollInfo({ scrollDirection: 'down' })
+    const nextSection = (scrollSection + 1) * window.innerHeight
+
+    disableScrollHandling()
 
     window.scrollTo({
       top: nextSection,
       behavior: 'smooth',
     })
+
+    enableScrollHandling()
   }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const newSection = determineCurrentSection()
-      setCurrentSection(newSection)
-
-      setIsVisible(newSection < sectionHeights.length - 1)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   return (
     <div>
-      {isVisible && (
+      {visibleScrollDown && (
         <div
           className={styles.scrollButton}
           onClick={scrollToNextSection}>

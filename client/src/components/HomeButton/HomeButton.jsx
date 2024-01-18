@@ -1,40 +1,33 @@
 import homeIcon from '../../../dist/assets/icons8-home-64.png'
 import styles from './HomeButton.module.css'
-import { useState, useEffect } from 'react'
+import { useScrollContext } from '../../context'
 
 function HomeButton() {
-  const [isVisible, setIsVisible] = useState(false)
+  const { 
+    scrollInfo, 
+    updateScrollInfo,
+    disableScrollHandling,
+    enableScrollHandling,
+  } = useScrollContext()
+  const { visibleScrollHome, scrollDirection } = scrollInfo
 
-  const windowHeight = window.innerHeight
 
   const scrollToHome = () => {
+    updateScrollInfo({ scrollDirection: 'up' })
+
+    disableScrollHandling()
+
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     })
+
+    enableScrollHandling()
   }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY
-
-      if (currentScrollY > (windowHeight * 3) - 20) {
-        setIsVisible(true)
-      } else if (currentScrollY < windowHeight * 3) {
-        setIsVisible(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   return (
     <div>
-      { isVisible && (
+      { visibleScrollHome && (
         <div onClick={scrollToHome}>
           <img 
             className={styles.homeButton}

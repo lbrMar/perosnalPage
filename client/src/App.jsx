@@ -1,8 +1,8 @@
+/******************************* impoty styles *******************************/
 import styles from './App.module.css'
 
 /***************************** import components *****************************/
-import ScrollColorChange from './scrollEffects/ScrollColorChange'
-import ScrollSlowOnY from './scrollEffects/ScrollSlowOnY'
+import ScrollEffectHandler from './scrollEffects/ScrollEffectHandler'
 import LoadingPage from './components/LoadingPage/LoadingPage'
 import NavBar from './components/NavBar/NavBar'
 import Landing from './components/Landing/Landing'
@@ -33,14 +33,13 @@ function App() {
         <LoadingPage />
       ) : (
         <div className={styles.mainContainer}>
-          <ScrollColorChange />
-          <ScrollSlowOnY />
+          <ScrollEffectHandler />
           <NavBar />
           <Landing />
           <About />
           <Arcade />
           <Contact />
-            <HomeButton />
+          <HomeButton />
           <Footer />
         </div>
       )}
