@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <div>
       <div className={styles.flexRowContainer}>
-        <p>{`@lbrm`}</p>
+        <p className={styles.titleItem}>{`@lbrm`}</p>
         <div className={styles.linksContainer}>
           <p className={styles.linkItem}>{`// home`}</p>
           <p className={styles.linkItem}>{`// about`}</p>

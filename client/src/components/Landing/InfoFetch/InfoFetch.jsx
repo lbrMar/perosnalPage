@@ -6,7 +6,7 @@ function InfoFetch() {
       <div className={styles.textContainer}>
         <p className={styles.pTitle}>Lukas@Myhal</p>
       </div>
-      <p>-----------------------</p>
+      <p>---------------------------</p>
       <div className={styles.textContainer}>
         <p className={styles.pTitle}>Skills:</p>
         <p className={styles.pInfo}>Javascript React CSS HTML NODE</p>
@@ -18,6 +18,9 @@ function InfoFetch() {
       <div className={styles.textContainer}>
         <p className={styles.pTitle}>University:</p>
         <p className={styles.pInfo}>Wilfrid Laurier University FRENCH MAJOR</p>
+      </div>
+      <div className={styles.textContainer}>
+        <p className={styles.pTitle}>About:</p>
       </div>
     </div>
   )

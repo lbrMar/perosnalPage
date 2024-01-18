@@ -26,6 +26,7 @@ body {
   color: var(--primary-text);
   box-sizing: border-box;
   height: 100%;
+  width: 100%;
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -56,17 +57,39 @@ body {
   margin: 1vh;
 }
 
-.displayContainer {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--display-bg);
-  border: 2px solid var(--primary-border-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  height: 70%;
-  width: 85%;
-  backdrop-filter: blur(8px);
+@media screen and (min-width: 0px) {
+  .displayContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--display-bg);
+    border: 2px solid var(--primary-border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    height: 80%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .displayContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--display-bg);
+    border: 2px solid var(--primary-border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    height: 70%;
+    width: 85%;
+    backdrop-filter: blur(8px);
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .flexColumnContainer {

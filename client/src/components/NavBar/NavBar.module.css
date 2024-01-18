@@ -20,8 +20,32 @@
   font-size: 1.2rem;
 }
 
-.linkItem {
-  font-size: 1.2rem;
+@media screen and (min-width: 0px) {
+  .titleItem {
+    font-size: 1rem;
+    font-style: italic;
+    text-shadow: -3px 3px #FF004D;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .titleItem {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-shadow: -3px 3px #FF004D;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .linkItem {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .linkItem {
+    font-size: 1.2rem;
+  }
 }
 
 .linkItem:hover {
