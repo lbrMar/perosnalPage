@@ -8,7 +8,7 @@ const useScrollContext = () => {
 
 const ScrollProvider = ({ children }) => {
   const [scrollInfo, setScrollInfo] = useState({
-    allowScrollHandling: false,
+    allowScrollHandling: true,
     scrollPosition: 0,
     scrollSection: 0,
     scrollDirection: null,
@@ -24,15 +24,17 @@ const ScrollProvider = ({ children }) => {
   }
 
   const disableScrollHandling = () => {
-    updateScrollInfo({
-      allowScrollHandling: false,
-    })
+    setTimeout(() => {
+      updateScrollInfo({
+        allowScrollHandling: true,
+      })
+    }, 2000)
   }
 
   const enableScrollHandling = () => {
-    updateScrollInfo({
-      allowScrollHandling: true,
-    })
+      updateScrollInfo({
+        allowScrollHandling: false,
+      })
   }
 
   const showScrollDownBtn = (scrollPosition, sectionHeights, numOfSections) => {

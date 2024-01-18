@@ -44,8 +44,8 @@ const ScrollSlowOnY = {
       scrollSection,
       sectionHeights,
       windowHeight) {
-    // runs when false.....
-    if (allowScrollHandling) {
+
+    if (!allowScrollHandling) {
       return
     }
 
