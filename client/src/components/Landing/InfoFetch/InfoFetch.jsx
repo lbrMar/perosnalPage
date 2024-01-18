@@ -21,6 +21,16 @@ function InfoFetch() {
       </div>
       <div className={styles.textContainer}>
         <p className={styles.pTitle}>About:</p>
+        <p className={styles.pInfo}>{`Greetings! I'm Lukas, a self-taught web developer`}</p>
+      </div>
+      <div className={styles.textContainer}>
+        <p className={styles.pInfo}>{`with a unique journey —a decade of nurturing trees`}</p>
+      </div>
+      <div className={styles.textContainer}>
+        <p className={styles.pInfo}>{`and four seasons as a ski patroller.Now, I'm planting`}</p>
+      </div>
+      <div className={styles.textContainer}>
+        <p className={styles.pInfo}>{`seeds of innovation in the digital realm.`}</p>
       </div>
     </div>
   )

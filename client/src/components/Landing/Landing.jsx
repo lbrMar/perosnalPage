@@ -25,7 +25,7 @@ function Landing() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.displayContainer}>
-        {windowWidth > 600 ? (
+        {windowWidth > 1050 ? (
         <AsciiArt />
         ) : (
         <AsciiArtMobile />

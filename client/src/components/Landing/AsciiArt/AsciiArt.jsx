@@ -10,8 +10,8 @@ function AsciiArt() {
     <pre className={styles.asciiPre}>..: .  .. .   .:.: :.   :..: :.:::                                  @  . .:.:  :.   :.. .. : : . : . .: </pre>
     <pre className={styles.asciiPre}>.   ..   :.  -:: ... =. ...   :::                                 .     .:.. - . .- . ::: ...........:. </pre>
     <pre className={styles.asciiPre}>.:..........::  ... : ... . :    - *                              %   @ .    . ....  :   .   : ... .  . </pre>
-    <pre className={styles.asciiPre}>:   . .. :  ::   . ... ..: :  @ = +                              %       : :... . :. .. . - . ..: . .. </pre>
-    <pre className={styles.asciiPre}>-... : :     . -....   :   .  . : *            . :.  .           #  :=  : ..... :  ...... . . .  . .   </pre>
+    <pre className={styles.asciiPre}>:   . .. :  ::   . ... ..: :  @ = +                              %       : :... . :. .. . - . ..: . .. .</pre>
+    <pre className={styles.asciiPre}>-... : :     . -....   :   .  . : *            . :.  .           #  :=  : ..... :  ...... . . .  . .   .</pre>
     <pre className={styles.asciiPre}>: . : : .... :. .:.. ::  .:  = +.- +                 .            #  .- -.   ..:. :..:.:... :.... . : . </pre>
     <pre className={styles.asciiPre}>- : :: : .... :    .   :.. ..= *.  +                              %  .* -..-::  .. :.  .. ... ..: : .:. </pre>
     <pre className={styles.asciiPre}>.      .  . .  - ....- . ..:.   :  +.                  .          *  .   :  . . ..  . ..   :.   : . . . </pre>
@@ -21,8 +21,8 @@ function AsciiArt() {
     <pre className={styles.asciiPre}>..... ..: :.:.. .. .. . :. :      --@@@@@  @:@*@@    @@@*@*@ @@@@@+@ :    *  :.:.... ... :.. .  . :..:: </pre>
     <pre className={styles.asciiPre}>. .. .....   .. :.: :.. . .@@  @     #   @@%    =    .     @@% *.     @  @@ ..... - . . .. . .=.:.. ... </pre>
     <pre className={styles.asciiPre}>.  . . . .: ...  .   .  . *  @ @       #+. -* :      - - #*+ +*%      # @ @ : ...... . .  :. ..  . :  . </pre>
-    <pre className={styles.asciiPre}>. .:. .: .  . :::....::. # .@@@              .  .   # -              *@@ % .....  : ..... : . ....: .  </pre>
-    <pre className={styles.asciiPre}>::  . . :  :.. .  : . - + =# @              . -#   #              . @  +# :. ..  -  ..     ..... : :  </pre>
+    <pre className={styles.asciiPre}>. .:. .: .  . :::....::. # .@@@              .  .   # -              *@@ % .....  : ..... : . ....: .  .</pre>
+    <pre className={styles.asciiPre}>::  . . :  :.. .  : . - + =# @              . -#   #              . @  +# :. ..  -  ..     ..... : :  . </pre>
     <pre className={styles.asciiPre}>:   . :.: .  :.....  .::.  %   @.    .         ##    +#*              @- .     ..: : .: ....:: ..  : .  </pre>
     <pre className={styles.asciiPre}>...... .. :... . . :.   :.  #  @@ ...                   @            @@ :@ ... .   ... .. .. . :: :...  </pre>
     <pre className={styles.asciiPre}>:.  ..... .  .....  . :.  :     @@         -  @=@+:-+@@=            @@@    . .:..:..  ...:..... ..   .: </pre>
@@ -32,15 +32,15 @@ function AsciiArt() {
     <pre className={styles.asciiPre}>.. . :.  ... . :. ..:... . .. . @@@-@@@@@ @@@@    .:    :@@@@#@@#@=*@@  ... : :  .. .  ..  -:.:.. :.    </pre>
     <pre className={styles.asciiPre}>:  :.. .::  .. :..: .  .  . :    @@@=*+@ *@                .@-=@=+@@@@ .   .: .  :  :   ...    .. . ... </pre>
     <pre className={styles.asciiPre}>. ......:  ..  : ...:.:: ::. .:.  @@@.@-+@@    #@@@@@@#+    @@ @-@@@    : .   :: .....::..  :..: . ...: </pre>
-    <pre className={styles.asciiPre}>:  ::.  : :. .   . .    .. :.    *#@@@:@@@@      @@@       @@-=@@@% ...:  : ....:: . .. ..: ... - : :  </pre>
+    <pre className={styles.asciiPre}>:  ::.  : :. .   . .    .. :.    *#@@@:@@@@      @@@       @@-=@@@% ...:  : ....:: . .. ..: ... - : : . </pre>
     <pre className={styles.asciiPre}>. :. . .:    : :-  .. :: ..: .... -@ @@@@   @@ *@     @ =@   @@@@ :@ .  . :   ..: ....   .   .:. . : .. </pre>
     <pre className={styles.asciiPre}>...   : ...- :.. :: - .:...   .-. *=@= @@ @%   @  -   @       @ -@@= ...   ::... ...   :.:...  . : .. . </pre>
-    <pre className={styles.asciiPre}>...:    ....  .    ..  ..::  :  +  @@:@  + @ .+     = @    @=%@  :  .:..   . ..:.... : ... . :....::: </pre>
-    <pre className={styles.asciiPre}>.  . .. .....:: ... .: ..       .   *@*@@  +@@%  :.=@=: +@@+@@   *       -:   .   ... . ..  .... .    </pre>
+    <pre className={styles.asciiPre}>...:    ....  .    ..  ..::  :  +  @@:@  + @ .+     = @    @=%@  :  .:..   . ..:.... : ... . :....::: . </pre>
+    <pre className={styles.asciiPre}>.  . .. .....:: ... .: ..       .   *@*@@  +@@%  :.=@=: +@@+@@   *       -:   .   ... . ..  .... .  ..  </pre>
     <pre className={styles.asciiPre}>. .:.:.:: .  : ...  .  . .   @@@@@:    =@++@@            @@==*@    # @@@@@    ..::-  : .:.... :.:.:...  </pre>
     <pre className={styles.asciiPre}>. :.    : :...   . ::.     @@@@   -     -@#:=#@@@@@@@@@%#- *@@     #   @@%@@     . :.  . . : . .  . ::  </pre>
     <pre className={styles.asciiPre}>.  ....:  ....:: .     @*@@@ @    *      #@%#++:      :=**@@#      * .  @:@@@@#      ...:  : : ..:: : . </pre>
-                      <pre className={styles.asciiPre}>@@@@@ @=+ @                                          @ *--%@@@@@        </pre>
+    <pre className={styles.asciiPre}>                  @@@@@ @=+ @                                          @ *--%@@@@@                      </pre>
   </div>
   )
 }
