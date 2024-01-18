@@ -23,6 +23,16 @@ const ScrollProvider = ({ children }) => {
     }))
   }
 
+  const windowHeight = window.innerHeight
+  const totalHeight = document.body.scrollHeight
+  const numOfSections = Math.floor(totalHeight / windowHeight)
+  const sectionHeights = []
+  let tempHeight = 0
+  for (let i = 0; i < numOfSections; i++) {
+    sectionHeights[i] = tempHeight
+    tempHeight += windowHeight
+  }
+
   const disableScrollHandling = () => {
     setTimeout(() => {
       updateScrollInfo({
@@ -60,6 +70,9 @@ const ScrollProvider = ({ children }) => {
       enableScrollHandling,
       showScrollDownBtn,
       showScrollHomeBtn,
+      sectionHeights,
+      windowHeight,
+      numOfSections,
     }}>
       { children }
     </ScrollContext.Provider>

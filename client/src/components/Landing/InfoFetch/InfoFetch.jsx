@@ -32,6 +32,9 @@ function InfoFetch() {
       <div className={styles.textContainer}>
         <p className={styles.pInfo}>{`seeds of innovation in the digital realm.`}</p>
       </div>
+      <div className={styles.textContainer}>
+        <p className={styles.pTitle}>Commits:</p>
+      </div>
     </div>
   )
 }
