@@ -1,4 +1,5 @@
 import styles from './InfoFetch.module.css'
+import GitCommitGraph from '../GitCommitGraph/GitCommitGraph'
 
 function InfoFetch() {
   return (
@@ -34,6 +35,9 @@ function InfoFetch() {
       </div>
       <div className={styles.textContainer}>
         <p className={styles.pTitle}>Commits:</p>
+      </div>
+      <div className={styles.textContainer}>
+        <GitCommitGraph />
       </div>
     </div>
   )
