@@ -3,7 +3,3 @@
 .mainContainer {
   composes: mainContainer from "../styles/main.module.css";
 }
-
-.btn {
-  composes: button primary from "../styles/main.module.css";
-}

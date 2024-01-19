@@ -1,0 +1,247 @@
+:root {
+  font-family: 'Ubuntu Mono', Monaco, 'Courier New', Courier, monospace;
+  font-size: 1vw;
+  line-height: 0.8;
+  color: var(--primary-text);
+
+/*******************************   font colors *******************************/
+  --primary-text: #FAEF5D; /* bright yellow */
+  --secondary-text: #FFF5E0; /* pale biege */
+  --primary-text-shadow: #0174BE; /* vibrant red */
+  --secondary-text-shadow: #015D98; /* pale blue */
+
+/****************************   background colors ****************************/
+  --primary-background: #FF004D; /* hot dark pink */
+  --secondary-background: #22092C; /* dark purple */
+  --accent-background: #1D2B53; /* beige blue */
+  --extra-background: #000000; /* black */
+  --transparent-background: #7E255399; /* pastel purple */
+
+/******************************   border colors ******************************/
+  --primary-border: #720455; /* hot purple */
+}
+
+* {
+  min-width: 0px;
+}
+
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--primary-background);
+}
+
+/******************************** bakcgrounds ********************************/
+
+.blurBackground {
+  background-color: var(--transparent-background);
+  backdrop-filter: blur(8px);
+}
+
+/******************************** font styles ********************************/
+/* text-shadow: [horizontal offset] [vertical offset] [blur radius] [color]; */
+
+.fontMain {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--secondary-text);
+}
+
+.fontTitle {
+  color: var(--primary-text);
+  font-style: italic;
+  font-weight: 900;
+  text-shadow: -4px 4px var(--primary-text-shadow);
+}
+
+.fontSubTitle {
+  color: var(--primary-text);
+  font-weight: 700;
+  text-shadow: -4px 4px var(--secondary-text-shadow);
+}
+
+/**************************** margin and padding *****************************/
+/************** padding/margin: [top] [right] [bottom] [left]; ***************/
+
+.paddingWeak {
+  padding: 1%;
+}
+
+.paddingMid {
+  padding: 3%;
+}
+
+.paddingHard {
+  padding: 5%;
+}
+
+.marginWeak {
+  margin: 1%;
+}
+
+.marginMid {
+  margin: 3%;
+}
+
+.marginHard {
+  margin: 5%;
+}
+
+/******************************* border styles *******************************/
+/*********** border: [border-width] [border-style] [border-color]; ***********/
+/* box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] [color];*/
+
+.borderModern {
+  border-radius: 10px;
+  border: 1px solid var(--primary-border);
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+}
+
+.borderStark {
+  border-radius: 0px;
+  border: 1px solid var(--primary-border);
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.borderNone {
+  border-radius: 10px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+}
+
+/*********************************** flex ***********************************/
+/********** justify-content: [main-axis] align-items: [cross-axis] **********/
+
+.flexRowContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+}
+
+.flexColumnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+}
+
+.flexCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.flexRowSpaceBetween {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexColumnSpaceBetween {
+  justify-content: center;
+  align-items: space-between;
+}
+
+/******************************** containers ********************************/
+
+.windowContainer {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pageContainer {
+  box-sizing: border-box;
+  width: 90%;
+  height: 90%;
+}
+
+.displayContainer {
+  box-sizing: border-box;
+  width: 80%;
+  height: 80%;
+}
+
+.contentContainer {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+/***************************** fixed containers *****************************/
+
+.fixedTopBar {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.fixedBottomBar {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+/**************************** composed containers ****************************/
+
+.webSectionContainer {
+  composes:
+    windowContainer
+    flexColumnContainer
+    flexCenter
+    marginHard
+    paddingHard;
+}
+
+.webImageContainer {
+  composes:
+    pageContainer
+    flexRowContainer
+    flexCenter
+    marginHard
+    paddingHard
+    borderNone
+}
+
+@medica screen and (min-width: 0px) {
+  .webDisplayContainer {
+    composes:
+      displayContainer
+      flexColumnContainer
+      flexCenter
+      marginWeak
+      paddingWeak
+      borderModern
+      blurBackground;
+  }
+}
+
+@medica screen and (min-width: 600px) {
+  .webDisplayContainer {
+    composes:
+      displayContainer
+      flexRowContainer
+      flexCenter
+      borderModern
+      blurBackground;
+  }
+}
+
+.webTopNavBar {
+  composes:
+    fixedTopBar
+    flexRowContainer
+    flexRowSpaceBetween
+    borderModern
+    blurBackground;
+}
