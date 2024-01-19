@@ -3,8 +3,12 @@ import styles from './PokemonGame.module.css'
 function PokemonGame() {
 
   return (
-    <div>
-      <h1>THIS IS THE GAME</h1>
+    <div className={styles.gameContainer}>
+      <div className={styles.titleContainer}>
+        <h3>POKEMON GAME</h3>
+        <p>----------------------</p>
+      </div>
+
     </div>
   )
 }
