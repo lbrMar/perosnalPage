@@ -4,7 +4,7 @@
 .menuContainer {
   composes: flexColumnContainer from '../../../../styles/main.module.css';
   height: 80%;
-  width: 80%;
+  width: 100%;
 }
 
 .titleContainer {
@@ -15,7 +15,17 @@
 .menuTitle {
   composes: fontSubTitle from '../../../../styles/main.module.css';
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+}
+
+.titleBtn {
+  text-align: center;
+  width: 50%;
+}
+
+.titleBtn:hover {
+  text-shadow: -4px 4px var(--secondary-text-shadow);
+  cursor: pointer;
 }
 
 .linkContainer {
@@ -25,11 +35,12 @@
   text-align: center;
 }
 
-.linkStyle:hover {
-  background-color: #72045550;
-}
-
 .linkStyle {
   text-decoration: none;
   transition: backgorund-color 0.3s ease;
 }
+
+.linkStyle:hover {
+  text-shadow: -4px 4px var(--secondary-text-shadow);
+}
+

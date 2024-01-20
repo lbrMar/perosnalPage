@@ -24,7 +24,7 @@ function InfoFetch() {
         <h3 className={styles.fontSubTitle}>About:</h3>
         <h3 className={styles.fontMain}>
 {`Greetings! I'm Lukas, a self-taught web developer 
-with a unique journey —a decade of nurturing trees 
+with a unique journey —a decade of planting trees 
 and four seasons as a ski patroller. 
 Now, I'm planting seeds of innovation in the digital realm.`}
         </h3>

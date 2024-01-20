@@ -6,9 +6,13 @@ function GameMenu() {
   return (
     <div className={styles.menuContainer}>
       <div className={styles.titleContainer}>
-        <h3 className={styles.menuTitle}>Game@Menu</h3>
+        <div className={styles.titleBtn}>
+          <h3 className={styles.menuTitle}>Game@Menu</h3>
+        </div>
         <h3>|</h3>
-        <h3 className={styles.menuTitle}>High@Scores</h3>
+        <div className={styles.titleBtn}>
+          <h3 className={styles.menuTitle}>High@Scores</h3>
+        </div>
       </div>
       <Link 
         className={styles.linkStyle}
