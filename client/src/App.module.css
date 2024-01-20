@@ -1,5 +1,5 @@
 @import "../styles/main.module.css";
 
 .mainContainer {
-  composes: webSectionContainer from "../styles/main.module.css";
+  composes: webMainContainer from "../styles/main.module.css";
 }

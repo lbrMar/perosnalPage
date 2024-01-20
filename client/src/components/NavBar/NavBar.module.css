@@ -10,6 +10,10 @@
   min-width: 40%;
 }
 
+.titleItem {
+  composes: fontTitle from '../../../styles/main.module.css';
+}
+
 .linkItem {
   composes: fontSubTitle from '../../../styles/main.module.css';
   font-style: italic;

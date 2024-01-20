@@ -19,7 +19,7 @@
 }
 
 .loadingContainer {
-  composes: mainContainer from '../../../styles/main.module.css';
+  composes: webMainContainer from '../../../styles/main.module.css';
   height: 100vh;
 }
 
@@ -29,8 +29,6 @@
 }
 
 .loadingText {
-  font-size: 2rem;
-  font-style: italic;
-  font-weight: 700;
-  text-shadow: -4px 4px #0174BE;
+  composes: fontTitle from '../../../styles/main.module.css';
+  font-size: 3rem;
 }
