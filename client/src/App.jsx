@@ -37,6 +37,10 @@ function App() {
           <NavBar />
           <Landing />
           <About />
+          <Arcade />
+          <Contact />
+          <HomeButton />
+          <Footer />
         </div>
       )}
     </div>
@@ -44,9 +48,3 @@ function App() {
 }
 
 export default App
-/*
-          <Arcade />
-          <Contact />
-          <HomeButton />
-          <Footer />
-*/

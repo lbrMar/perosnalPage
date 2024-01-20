@@ -6,7 +6,7 @@
 /*******************************   font colors *******************************/
   --primary-text: #FAEF5D; /* bright yellow */
   --secondary-text: #FFF5E0; /* pale biege */
-  --primary-text-shadow: #0174BE; /* vibrant red */
+  --primary-text-shadow: #720455; /* vibrant red */
   --secondary-text-shadow: #015D98; /* pale blue */
 
 /****************************   background colors ****************************/
@@ -54,7 +54,7 @@ body {
 
 .fontMain {
   font-style: italic;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--secondary-text);
   margin: 0%;
 }
@@ -63,7 +63,7 @@ body {
   color: var(--primary-text);
   font-style: italic;
   font-weight: 900;
-  text-shadow: -4px 4px var(--primary-text-shadow);
+  text-shadow: -4px 4px var(--secondary-text-shadow);
 }
 
 .fontSubTitle {
@@ -73,6 +73,10 @@ body {
 
 /**************************** margin and padding *****************************/
 /************** padding/margin: [top] [right] [bottom] [left]; ***************/
+
+.paddingNone{
+  padding: 0%;
+}
 
 .paddingSoft {
   padding: 0.5%;
@@ -84,6 +88,10 @@ body {
 
 .paddingHard {
   padding: 2%;
+}
+
+.marginNone{
+  margin: 0%;
 }
 
 .marginSoft {
@@ -167,8 +175,8 @@ body {
 @media screen and (min-width: 0px) {
   .displayContainer {
     box-sizing: border-box;
-    width: 97%;
-    height: 97%;
+    width: 98%;
+    height: 98%;
   }
 }
 
@@ -176,7 +184,7 @@ body {
   .displayContainer {
     box-sizing: border-box;
     width: 90%;
-    height: 90%;
+    height: 80%;
   }
 }
 

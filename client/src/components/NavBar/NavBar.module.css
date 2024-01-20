@@ -11,7 +11,7 @@
 }
 
 .titleItem {
-  composes: fontTitle from '../../../styles/main.module.css';
+  composes: fontTitle marginNone from '../../../styles/main.module.css';
 }
 
 .linkItem {

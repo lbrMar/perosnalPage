@@ -10,5 +10,5 @@
 }
 
 .footer {
-  composes: fontTitle from '../../../styles/main.module.css';
+  composes: fontMain marginMid from '../../../styles/main.module.css';
 }
