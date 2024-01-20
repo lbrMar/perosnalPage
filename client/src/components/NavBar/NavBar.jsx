@@ -28,15 +28,15 @@ function NavBar() {
         <p className={styles.titleItem}>{`@lbrm`}</p>
         <div className={styles.linksContainer}>
           {linkItems.map((item, index) => (
-            <p
+            <h3
               className={styles.linkItem}
               key={index}
               onClick={() => scrollOnLinkClick(index)}
             >
             {item}
-            </p>
+            </h3>
           ))}
-          <p className={styles.linkItem}>
+          <h3 className={styles.linkItem}>
             <a 
               href='https://github.com/lbrMar' 
               target='_blank'
@@ -45,7 +45,7 @@ function NavBar() {
             >
             {`// git`}
             </a>
-          </p>
+          </h3>
         </div>
       </div>
     </div>

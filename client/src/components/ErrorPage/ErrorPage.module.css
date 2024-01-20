@@ -20,8 +20,7 @@
 }
 
 .errorContainer {
-  composes: mainContainer from '../../../styles/main.module.css';
-  height: 100vh;
+  composes: webSectionContainer from '../../../styles/main.module.css';
 }
 
 .errorImg {
@@ -30,8 +29,5 @@
 }
 
 .errorText {
-  font-size: 2rem;
-  font-style: italic;
-  font-weight: 700;
-  text-shadow: -4px 4px #0174BE;
+  compsoes: fontTitle from '../../../styles/main.module.css';
 }

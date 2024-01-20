@@ -1,56 +1,20 @@
 @import '../../../styles/main.module.css';
 
 .flexRowContainer {
-  composes: flexRowContainer fixedNavTop from '../../../styles/main.module.css';
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--primary-bg);
-  width: 99vw;
-  padding: 0px 1.5vw 0px 1.5vw;
-  margin: 0.4vw;
-  font-weight: 900;
+  composes: webTopNavBar from '../../../styles/main.module.css';
 }
 
 .linksContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding-bottom: 0px;
+  composes: flexRowContainer fontSubTitle from '../../../styles/main.module.css';
+  justify-content: space-around;
+  min-width: 40%;
+}
+
+.linkItem {
+  composes: fontSubTitle from '../../../styles/main.module.css';
   font-style: italic;
-  font-weight: 900;
-  font-size: 1.3rem;
-}
-
-@media screen and (min-width: 0px) {
-  .titleItem {
-    font-size: 1rem;
-    font-style: italic;
-    text-shadow: -3px 3px #FF004D;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .titleItem {
-    font-size: 1.3rem;
-    font-style: italic;
-    text-shadow: -3px 3px #FF004D;
-  }
-}
-
-@media screen and (min-width: 0px) {
-  .linkItem {
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .linkItem {
-    font-size: 1.3rem;
-  }
 }
 
 .linkItem:hover {
-  font-style: italic;
-  font-weight: 900;
-  text-shadow: -3px 3px #FF004D;
+  text-shadow: -2px 2px var(--primary-text-shadow);
 }

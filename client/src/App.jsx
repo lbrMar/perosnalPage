@@ -36,11 +36,6 @@ function App() {
           <ScrollEffectHandler />
           <NavBar />
           <Landing />
-          <About />
-          <Arcade />
-          <Contact />
-          <HomeButton />
-          <Footer />
         </div>
       )}
     </div>
@@ -48,3 +43,10 @@ function App() {
 }
 
 export default App
+/*
+          <About />
+          <Arcade />
+          <Contact />
+          <HomeButton />
+          <Footer />
+*/
