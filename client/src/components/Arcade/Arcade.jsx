@@ -11,16 +11,7 @@ function Arcade() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.displayContainer}>
-        <GameMenu />
-        <div className={styles.gameContainer}>
-          <div>
-            {navigation.state === 'loading' ? (
-              <span class="loader"></span>
-            ) : (
-            <Outlet />
-            )}
-          </div>
-        </div>
+        <Outlet />
       </div>
     </div>
   )

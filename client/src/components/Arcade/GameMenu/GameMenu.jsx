@@ -5,9 +5,51 @@ function GameMenu() {
 
   return (
     <div className={styles.menuContainer}>
-      <h3 className={styles.menuTitle}>Game@Menu</h3>
-      <p>---------------</p>
-      <p><Link to={`arcade/pokemongame`}>Pokemon Game</Link></p>
+      <div className={styles.titleContainer}>
+        <h3 className={styles.menuTitle}>Game@Menu</h3>
+        <h3>|</h3>
+        <h3 className={styles.menuTitle}>High@Scores</h3>
+      </div>
+      <Link 
+        className={styles.linkStyle}
+        to={`arcade/pokemongame`}
+      >
+        <div className={styles.linkContainer}>
+          Pokemon Game
+        </div>
+      </Link>
+      <Link 
+        className={styles.linkStyle}
+        to={`arcade/pokemongame`}
+      >
+        <div className={styles.linkContainer}>
+          Pokemon Game
+        </div>
+      </Link>
+      <Link 
+        className={styles.linkStyle}
+        to={`arcade/pokemongame`}
+      >
+        <div className={styles.linkContainer}>
+          Pokemon Game
+        </div>
+      </Link>
+      <Link 
+        className={styles.linkStyle}
+        to={`arcade/pokemongame`}
+      >
+        <div className={styles.linkContainer}>
+          Pokemon Game
+        </div>
+      </Link>
+      <Link 
+        className={styles.linkStyle}
+        to={`arcade/pokemongame`}
+      >
+        <div className={styles.linkContainer}>
+          Pokemon Game
+        </div>
+      </Link>
     </div>
   )
 }

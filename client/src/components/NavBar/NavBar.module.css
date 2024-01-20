@@ -8,6 +8,7 @@
   composes: flexRowContainer fontSubTitle from '../../../styles/main.module.css';
   justify-content: space-around;
   min-width: 40%;
+  flex-grow: 2;
 }
 
 .titleItem {
@@ -17,8 +18,10 @@
 .linkItem {
   composes: fontSubTitle from '../../../styles/main.module.css';
   font-style: italic;
+  font-size: 0.8rem;
 }
 
 .linkItem:hover {
-  text-shadow: -2px 2px var(--primary-text-shadow);
+  text-shadow: -4px 4px var(--secondary-text-shadow);
+  cursor: pointer;
 }

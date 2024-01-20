@@ -40,6 +40,7 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: var(--primary-background);
+  transition: background-color 0.3s ease;
 }
 
 /******************************** bakcgrounds ********************************/
@@ -130,6 +131,11 @@ body {
 /*********************************** flex ***********************************/
 /********** justify-content: [main-axis] align-items: [cross-axis] **********/
 
+.flexContainer {
+  display: flex;
+  gap: 1%;
+}
+
 .flexRowContainer {
   display: flex;
   flex-direction: row;
@@ -167,7 +173,7 @@ body {
 /* covers entire view port, ensure margin + width or height summ 100 */
 .pageContainer {
   box-sizing: border-box;
-  width: 96vw;
+  width: 90vw;
   height: 96vh;
   margin: 2vh;
 }
@@ -231,7 +237,7 @@ body {
 .webImageContainer {
   composes:
     pageContainer
-    flexRowContainer
+    flexContainer
     flexCenter
     borderNone
 }

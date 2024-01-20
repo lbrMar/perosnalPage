@@ -12,7 +12,9 @@ import {
 import { ScrollProvider } from './context'
 import App from './App.jsx'
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
+import Spinner from './assets/Spinner/Spinner.jsx'
 import PokemonGame from './components/Arcade/PokemonGame/PokemonGame.jsx'
+import GameMenu from './components/Arcade/GameMenu/GameMenu.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: '/',
+        element: <GameMenu />,
+      },
       {
         path: 'arcade/pokemongame',
         element: <PokemonGame />,

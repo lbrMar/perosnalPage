@@ -6,9 +6,5 @@
 }
 
 .displayContainer {
-  composes: webDisplayContainer from '../../../styles/main.module.css';
-}
-
-.gameContainer {
-  composes: flexRowContainer flexCenter from '../../../styles/main.module.css';
+  composes: webDisplayContainer flexRowContainer flexCenter from '../../../styles/main.module.css';
 }

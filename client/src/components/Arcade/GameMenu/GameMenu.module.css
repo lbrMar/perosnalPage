@@ -1,5 +1,35 @@
 @import '../../../../styles/main.module.css';
 
+
 .menuContainer {
   composes: flexColumnContainer from '../../../../styles/main.module.css';
+  height: 80%;
+  width: 80%;
+}
+
+.titleContainer {
+  composes: flexRowContainer from '../../../../styles/main.module.css';
+  justify-content: space-evenly;
+}
+
+.menuTitle {
+  composes: fontSubTitle from '../../../../styles/main.module.css';
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+.linkContainer {
+  composes: fontMain padidngHard marginHard from '../../../../styles/main.module.css';
+  cursor: pointer;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.linkStyle:hover {
+  background-color: #72045550;
+}
+
+.linkStyle {
+  text-decoration: none;
+  transition: backgorund-color 0.3s ease;
 }
