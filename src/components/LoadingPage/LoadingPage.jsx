@@ -1,11 +1,12 @@
 import styles from './LoadingPage.module.css'
+import loadingIcon from '../../assets/icons/astro-surf-loading.png'
 
 function LoadingPage () {
   return (
     <div className={styles.loadingContainer}>
       <img
         className={styles.loadingImg}
-        src='../../../../dist/images/loadingPageSurfstronaut.png'
+        src={loadingIcon}
         alt='Surfing Astronaut'
       />
       <p className={styles.loadingText}>LOADING</p>
