@@ -1,5 +1,0 @@
-@import '../../../styles/main.module.css';
-
-.spinnerContainer {
-  composes: flexRowContainer flexCenter from '../../../styles/main.module.css';
-}

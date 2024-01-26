@@ -1,4 +1,4 @@
-import downArrowIcon from '../../../dist/assets/icons8-double-down-64.png'
+import downArrowIcon from '../../assets/icons/icon-down-arrow.png'
 import styles from './ScrollButton.module.css'
 import { useScrollContext } from '../../context'
 
@@ -11,8 +11,7 @@ function ScrollButton () {
   } = useScrollContext()
   const {
     scrollSection,
-    visibleScrollDown,
-    scrollDirection
+    visibleScrollDown
   } = scrollInfo
 
   const scrollToNextSection = () => {

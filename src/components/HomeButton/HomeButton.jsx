@@ -1,4 +1,4 @@
-import homeIcon from '../../../dist/assets/icons8-home-64.png'
+import homeIcon from '../../assets/icons/icon-home.png'
 import styles from './HomeButton.module.css'
 import { useScrollContext } from '../../context'
 
@@ -9,7 +9,7 @@ function HomeButton () {
     disableScrollHandling,
     enableScrollHandling
   } = useScrollContext()
-  const { visibleScrollHome, scrollDirection } = scrollInfo
+  const { visibleScrollHome } = scrollInfo
 
   const scrollToHome = () => {
     updateScrollInfo({ scrollDirection: 'up' })
