@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './GameMenu.module.css'
 
-function GameMenu() {
-
+function GameMenu () {
   return (
     <div className={styles.menuContainer}>
       <div className={styles.titleContainer}>
@@ -14,41 +13,41 @@ function GameMenu() {
           <h3 className={styles.menuTitle}>High@Scores</h3>
         </div>
       </div>
-      <Link 
+      <Link
         className={styles.linkStyle}
-        to={`arcade/pokemongame`}
+        to='arcade/pokemongame'
       >
         <div className={styles.linkContainer}>
           Pokemon Game
         </div>
       </Link>
-      <Link 
+      <Link
         className={styles.linkStyle}
-        to={`arcade/pokemongame`}
+        to='arcade/pokemongame'
       >
         <div className={styles.linkContainer}>
           Pokemon Game
         </div>
       </Link>
-      <Link 
+      <Link
         className={styles.linkStyle}
-        to={`arcade/pokemongame`}
+        to='arcade/pokemongame'
       >
         <div className={styles.linkContainer}>
           Pokemon Game
         </div>
       </Link>
-      <Link 
+      <Link
         className={styles.linkStyle}
-        to={`arcade/pokemongame`}
+        to='arcade/pokemongame'
       >
         <div className={styles.linkContainer}>
           Pokemon Game
         </div>
       </Link>
-      <Link 
+      <Link
         className={styles.linkStyle}
-        to={`arcade/pokemongame`}
+        to='arcade/pokemongame'
       >
         <div className={styles.linkContainer}>
           Pokemon Game

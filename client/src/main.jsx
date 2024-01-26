@@ -1,14 +1,14 @@
 import '../styles/main.module.css'
 
-/************************** import react functions **************************/
+/** ************************ import react functions **************************/
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from 'react-router-dom'
 
-/***************************** import components *****************************/
+/** *************************** import components *****************************/
 import { ScrollProvider } from './context'
 import App from './App.jsx'
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
@@ -23,14 +23,14 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <GameMenu />,
+        element: <GameMenu />
       },
       {
         path: 'arcade/pokemongame',
-        element: <PokemonGame />,
-      },
-    ],
-  },
+        element: <PokemonGame />
+      }
+    ]
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -38,5 +38,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ScrollProvider>
       <RouterProvider router={router} />
     </ScrollProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

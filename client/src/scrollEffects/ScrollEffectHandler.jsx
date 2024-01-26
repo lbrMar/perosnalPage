@@ -3,7 +3,7 @@ import { useScrollContext } from '../context'
 import ScrollColorChange from './ScrollColorChange.js'
 import ScrollSlowOnY from './ScrollSlowOnY.js'
 
-function ScrollEffectHandler() {
+function ScrollEffectHandler () {
   const {
     scrollInfo,
     updateScrollInfo,
@@ -11,51 +11,48 @@ function ScrollEffectHandler() {
     showScrollHomeBtn,
     sectionHeights,
     windowHeight,
-    numOfSections,
+    numOfSections
   } = useScrollContext()
   const {
-    allowScrollHanding, 
-    scrollPosition, 
+    allowScrollHanding,
+    scrollPosition,
     scrollDirection,
-    scrollSection,
-    visibleScrollDown,
-    visibleScrollHome,
+    scrollSection
   } = scrollInfo
-
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPosition = window.scrollY
-      const currentDirection = 
+      const currentDirection =
         ScrollSlowOnY.determineSrollDirection(currentScrollPosition, scrollPosition)
-      const currentScrollSection = 
+      const currentScrollSection =
         ScrollSlowOnY.determineCurrentSection(currentScrollPosition, sectionHeights)
 
       ScrollSlowOnY.goToSection(
-        allowScrollHanding, 
-        scrollDirection, 
-        scrollPosition, 
-        scrollSection, 
+        allowScrollHanding,
+        scrollDirection,
+        scrollPosition,
+        scrollSection,
         sectionHeights,
         windowHeight
       )
 
-      const isVisibleDownBtn = 
+      const isVisibleDownBtn =
         showScrollDownBtn(scrollPosition, sectionHeights, numOfSections)
 
-      const isVisibleHomeBtn = 
+      const isVisibleHomeBtn =
         showScrollHomeBtn(scrollPosition, sectionHeights, numOfSections)
 
-      updateScrollInfo({ 
+      updateScrollInfo({
         scrollPosition: currentScrollPosition,
         scrollDirection: currentDirection,
         scrollSection: currentScrollSection,
         visibleScrollDown: isVisibleDownBtn,
-        visibleScrollHome: isVisibleHomeBtn,
+        visibleScrollHome: isVisibleHomeBtn
       })
 
       ScrollColorChange.determineBackgroundColor(scrollPosition)
-    }    
+    }
 
     window.addEventListener('scroll', handleScroll)
 
@@ -63,7 +60,6 @@ function ScrollEffectHandler() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [scrollPosition, scrollDirection, scrollSection])
-
 
   return null
 }

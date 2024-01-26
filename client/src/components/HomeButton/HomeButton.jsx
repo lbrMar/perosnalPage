@@ -2,15 +2,14 @@ import homeIcon from '../../../dist/assets/icons8-home-64.png'
 import styles from './HomeButton.module.css'
 import { useScrollContext } from '../../context'
 
-function HomeButton() {
-  const { 
-    scrollInfo, 
+function HomeButton () {
+  const {
+    scrollInfo,
     updateScrollInfo,
     disableScrollHandling,
-    enableScrollHandling,
+    enableScrollHandling
   } = useScrollContext()
   const { visibleScrollHome, scrollDirection } = scrollInfo
-
 
   const scrollToHome = () => {
     updateScrollInfo({ scrollDirection: 'up' })
@@ -19,7 +18,7 @@ function HomeButton() {
 
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: 'smooth'
     })
 
     enableScrollHandling()
@@ -27,12 +26,13 @@ function HomeButton() {
 
   return (
     <div>
-      { visibleScrollHome && (
+      {visibleScrollHome && (
         <div onClick={scrollToHome}>
-          <img 
+          <img
             className={styles.homeButton}
             src={homeIcon}
-            alt='HOME' />
+            alt='HOME'
+          />
         </div>
       )}
     </div>

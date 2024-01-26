@@ -27,7 +27,7 @@ const ScrollSlowOnY = {
       behavior: 'smooth'
     })
   },
-  
+
   scrollToPrevSection: function (scrollSection, windowHeight) {
     const nextSection = (scrollSection) * windowHeight
 
@@ -38,13 +38,12 @@ const ScrollSlowOnY = {
   },
 
   goToSection: function (
-      allowScrollHandling, 
-      scrollDirection, 
-      scrollPosition,
-      scrollSection,
-      sectionHeights,
-      windowHeight) {
-
+    allowScrollHandling,
+    scrollDirection,
+    scrollPosition,
+    scrollSection,
+    sectionHeights,
+    windowHeight) {
     if (!allowScrollHandling) {
       return
     }
@@ -62,7 +61,7 @@ const ScrollSlowOnY = {
     ) {
       this.scrollToPrevSection(scrollSection, windowHeight)
     }
-  },
+  }
 }
 
 export default ScrollSlowOnY

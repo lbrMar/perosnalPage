@@ -1,7 +1,6 @@
 import styles from './PokemonGame.module.css'
 
-function PokemonGame() {
-
+function PokemonGame () {
   return (
     <div className={styles.gameContainer}>
       <div className={styles.titleContainer}>

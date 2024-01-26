@@ -1,7 +1,7 @@
 import styles from './InfoFetch.module.css'
 import GitCommitGraph from '../GitCommitGraph/GitCommitGraph'
 
-function InfoFetch() {
+function InfoFetch () {
   return (
     <div className={styles.flexColumnContainer}>
       <div className={styles.textContainer}>
@@ -23,7 +23,7 @@ function InfoFetch() {
       <div className={styles.textContainer}>
         <h3 className={styles.fontSubTitle}>About:</h3>
         <h3 className={styles.fontMain}>
-{`Greetings! I'm Lukas, a self-taught web developer 
+          {`Greetings! I'm Lukas, a self-taught web developer 
 with a unique journey —a decade of planting trees 
 and four seasons as a ski patroller. 
 Now, I'm planting seeds of innovation in the digital realm.`}

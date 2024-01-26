@@ -1,9 +1,8 @@
-const githubToken = import.meta.env.VITE_GITHUB_TOKEN;
+const githubToken = import.meta.env.VITE_GITHUB_TOKEN
 
-function GitCommitGraph() {
-
+function GitCommitGraph () {
   return (
-    <div></div>
+    <div />
   )
 }
 

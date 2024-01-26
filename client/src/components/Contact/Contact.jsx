@@ -1,12 +1,10 @@
 import styles from './Contact.module.css'
 
-function Contact() {
-
+function Contact () {
   return (
     <>
       <div className={styles.pageContainer}>
-        <div className={styles.displayContainer}>
-        </div>
+        <div className={styles.displayContainer} />
       </div>
       <p className={styles.footer}>@lbrm</p>
     </>

@@ -13,13 +13,13 @@ const ScrollProvider = ({ children }) => {
     scrollSection: 0,
     scrollDirection: null,
     visibleScrollDown: true,
-    visibleScrollHome: false,
+    visibleScrollHome: false
   })
 
   const updateScrollInfo = (newScrollInfo) => {
     setScrollInfo((prevScrollInfo) => ({
       ...prevScrollInfo,
-      ...newScrollInfo,
+      ...newScrollInfo
     }))
   }
 
@@ -36,15 +36,15 @@ const ScrollProvider = ({ children }) => {
   const disableScrollHandling = () => {
     setTimeout(() => {
       updateScrollInfo({
-        allowScrollHandling: true,
+        allowScrollHandling: true
       })
     }, 2000)
   }
 
   const enableScrollHandling = () => {
-      updateScrollInfo({
-        allowScrollHandling: false,
-      })
+    updateScrollInfo({
+      allowScrollHandling: false
+    })
   }
 
   const showScrollDownBtn = (scrollPosition, sectionHeights, numOfSections) => {
@@ -61,10 +61,9 @@ const ScrollProvider = ({ children }) => {
     return false
   }
 
-
   return (
-    <ScrollContext.Provider value={{ 
-      scrollInfo, 
+    <ScrollContext.Provider value={{
+      scrollInfo,
       updateScrollInfo,
       disableScrollHandling,
       enableScrollHandling,
@@ -72,9 +71,10 @@ const ScrollProvider = ({ children }) => {
       showScrollHomeBtn,
       sectionHeights,
       windowHeight,
-      numOfSections,
-    }}>
-      { children }
+      numOfSections
+    }}
+    >
+      {children}
     </ScrollContext.Provider>
   )
 }

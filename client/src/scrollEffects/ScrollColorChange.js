@@ -9,21 +9,21 @@ const ScrollColorChanger = {
   },
 
   determineBackgroundColor: function (scrollPosition) {
-      const screenHeight = window.innerHeight
-      const halfScreenHeight = screenHeight / 2
+    const screenHeight = window.innerHeight
+    const halfScreenHeight = screenHeight / 2
 
     if (scrollPosition < (screenHeight / 2)) {
       this.setBackgroundColor(this.bg1)
-    } else if (scrollPosition >= (screenHeight / 2) 
-        && scrollPosition < (screenHeight + halfScreenHeight)) {
+    } else if (scrollPosition >= (screenHeight / 2) &&
+        scrollPosition < (screenHeight + halfScreenHeight)) {
       this.setBackgroundColor(this.bg2)
-    } else if (scrollPosition >= (screenHeight + halfScreenHeight)
-        && (scrollPosition < ((screenHeight * 2) + halfScreenHeight))) {
+    } else if (scrollPosition >= (screenHeight + halfScreenHeight) &&
+        (scrollPosition < ((screenHeight * 2) + halfScreenHeight))) {
       this.setBackgroundColor(this.bg3)
     } else if (scrollPosition >= ((screenHeight * 2) + halfScreenHeight)) {
       this.setBackgroundColor(this.bg4)
     }
-  },
+  }
 }
 
 export default ScrollColorChanger

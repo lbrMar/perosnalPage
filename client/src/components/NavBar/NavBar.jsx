@@ -1,16 +1,16 @@
 import styles from './NavBar.module.css'
 import { useScrollContext } from '../../context'
 
-function NavBar() {
+function NavBar () {
   const {
-    sectionHeights,
+    sectionHeights
   } = useScrollContext()
 
   const linkItems = [
     '// home',
     '// about',
     '// arcade',
-    '// contact',
+    '// contact'
   ]
 
   const scrollOnLinkClick = (index) => {
@@ -18,14 +18,14 @@ function NavBar() {
 
     window.scrollTo({
       top: nextSection,
-      behavior: 'smooth',
+      behavior: 'smooth'
     })
   }
 
   return (
     <div>
       <div className={styles.flexRowContainer}>
-        <h2 className={styles.titleItem}>{`@lbrm`}</h2>
+        <h2 className={styles.titleItem}>@lbrm</h2>
         <div className={styles.linksContainer}>
           {linkItems.map((item, index) => (
             <h3
@@ -33,17 +33,17 @@ function NavBar() {
               key={index}
               onClick={() => scrollOnLinkClick(index)}
             >
-            {item}
+              {item}
             </h3>
           ))}
           <h3 className={styles.linkItem}>
-            <a 
-              href='https://github.com/lbrMar' 
+            <a
+              href='https://github.com/lbrMar'
               target='_blank'
-              rel="noopener noreferrer"
+              rel='noopener noreferrer'
               style={{ textDecoration: 'none', color: 'inherit' }}
             >
-            {`// git`}
+              // git
             </a>
           </h3>
         </div>

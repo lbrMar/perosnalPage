@@ -1,11 +1,11 @@
 import styles from './Arcade.module.css'
 import GameMenu from './GameMenu/GameMenu'
-import { 
+import {
   Outlet,
-  useNavigation,
+  useNavigation
 } from 'react-router-dom'
 
-function Arcade() {
+function Arcade () {
   const navigation = useNavigation()
 
   return (

@@ -2,17 +2,17 @@ import downArrowIcon from '../../../dist/assets/icons8-double-down-64.png'
 import styles from './ScrollButton.module.css'
 import { useScrollContext } from '../../context'
 
-function ScrollButton() {
+function ScrollButton () {
   const {
     disableScrollHandling,
     enableScrollHandling,
     updateScrollInfo,
-    scrollInfo, 
+    scrollInfo
   } = useScrollContext()
-  const { 
-    scrollSection, 
-    visibleScrollDown, 
-    scrollDirection,
+  const {
+    scrollSection,
+    visibleScrollDown,
+    scrollDirection
   } = scrollInfo
 
   const scrollToNextSection = () => {
@@ -23,7 +23,7 @@ function ScrollButton() {
 
     window.scrollTo({
       top: nextSection,
-      behavior: 'smooth',
+      behavior: 'smooth'
     })
 
     enableScrollHandling()
@@ -34,14 +34,16 @@ function ScrollButton() {
       {visibleScrollDown && (
         <div
           className={styles.scrollButton}
-          onClick={scrollToNextSection}>
-          <img 
-            src={downArrowIcon} 
-            alt='DOWN' />
+          onClick={scrollToNextSection}
+        >
+          <img
+            src={downArrowIcon}
+            alt='DOWN'
+          />
         </div>
       )}
     </div>
   )
 }
 
-export default ScrollButton;
+export default ScrollButton

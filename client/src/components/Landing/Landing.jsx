@@ -1,5 +1,5 @@
 import styles from './Landing.module.css'
-/***************************** import components *****************************/
+/** *************************** import components *****************************/
 import AsciiArt from './AsciiArt/AsciiArt'
 import AsciiArtMobile from './AsciiArt/AsciiArtMobile'
 import InfoFetch from './InfoFetch/InfoFetch'
@@ -7,7 +7,7 @@ import ScrollButton from '../ScrollButton/ScrollButton'
 
 import { useEffect, useState } from 'react'
 
-function Landing() {
+function Landing () {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {
@@ -25,11 +25,13 @@ function Landing() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.displayContainer}>
-        {windowWidth > 1050 ? (
-        <AsciiArt />
-        ) : (
-        <AsciiArtMobile />
-        )}
+        {windowWidth > 1050
+          ? (
+            <AsciiArt />
+            )
+          : (
+            <AsciiArtMobile />
+            )}
         <InfoFetch />
       </div>
       <ScrollButton />

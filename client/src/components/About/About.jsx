@@ -1,15 +1,13 @@
 import styles from './About.module.css'
 
-function About() {
-
+function About () {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.displayContainer}>
         <div className={styles.manContainer}>
-          <h1></h1>
+          <h1 />
         </div>
-        <div className={styles.termContainer}>
-        </div>
+        <div className={styles.termContainer} />
       </div>
     </div>
   )
