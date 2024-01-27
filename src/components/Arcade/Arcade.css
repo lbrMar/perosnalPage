@@ -1,8 +1,8 @@
 .arcadeMainContainer {
   box-sizing: border-box;
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
+  width: 98vw;
+  height: 98vh;
   display: flex;
   justify-content: center;
   align-items: center;

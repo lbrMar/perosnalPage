@@ -9,6 +9,7 @@ body
   - backgorund color is always there
 App
   - contains scoll
+  - overflow x - hidden, prevent overflow with scroll bar
 main 
   - is 100vh and 100 vw
   - do not add margin or padding
@@ -55,6 +56,23 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: var(--primary-background);
+  overflow-x: hidden;
+}
+
+/* WebKit Browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 10px;  
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-background);
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--transparent-background);
 }
 
 /******************************** bakcgrounds ********************************/
@@ -88,30 +106,6 @@ body {
 
 /**************************** margin and padding *****************************/
 /************** padding/margin: [top] [right] [bottom] [left]; ***************/
-
-.paddingWeak {
-  padding: 1%;
-}
-
-.paddingMid {
-  padding: 3%;
-}
-
-.paddingHard {
-  padding: 5%;
-}
-
-.marginWeak {
-  margin: 1%;
-}
-
-.marginMid {
-  margin: 3%;
-}
-
-.marginHard {
-  margin: 5%;
-}
 
 /******************************* border styles *******************************/
 /*********** border: [border-width] [border-style] [border-color]; ***********/

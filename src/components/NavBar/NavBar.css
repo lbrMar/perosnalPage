@@ -13,6 +13,7 @@
   padding: 0px 5px 0px 5px;
   background-color: var(--transparent-background);
   backdrop-filter: blur(8px);
+  overflow-x: hidden;
 }
 
 .titleItem {

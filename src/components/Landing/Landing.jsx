@@ -24,7 +24,7 @@ function Landing () {
   return (
     <div className='landingMainContainer'>
       <div className='landingDisplayContainer'>
-        {windowWidth > 1050
+        {windowWidth > 700
           ? (
             <AsciiArt />
             )

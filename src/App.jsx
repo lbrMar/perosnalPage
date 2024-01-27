@@ -6,7 +6,6 @@ import Landing from './components/Landing/Landing'
 import About from './components/About/About'
 import Arcade from './components/Arcade/Arcade'
 import Contact from './components/Contact/Contact'
-import HomeButton from './components/HomeButton/HomeButton'
 import { useEffect, useState } from 'react'
 
 function App () {
@@ -34,7 +33,6 @@ function App () {
             <About />
             <Arcade />
             <Contact />
-            <HomeButton />
           </div>
           )}
     </div>

@@ -1,3 +1,4 @@
+import './HomeButton.css'
 import homeIcon from '../../assets/icons/icon-home.png'
 import { useScrollContext } from '../../context'
 
