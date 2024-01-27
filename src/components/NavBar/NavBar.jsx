@@ -29,7 +29,7 @@ function NavBar () {
         <div className={styles.linksContainer}>
           {linkItems.map((item, index) => (
             <h3
-              className={styles.linkItem}
+              className={`${styles.linkItem} ${styles.fontSize}`}
               key={index}
               onClick={() => scrollOnLinkClick(index)}
             >
@@ -38,6 +38,7 @@ function NavBar () {
           ))}
           <h3 className={styles.linkItem}>
             <a
+              className={`${styles.linkItem} ${styles.fontSize} ${styles.gitLink}`}
               href='https://github.com/lbrMar'
               target='_blank'
               rel='noopener noreferrer'

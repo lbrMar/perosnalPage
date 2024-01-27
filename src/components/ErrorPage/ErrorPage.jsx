@@ -1,3 +1,4 @@
+import errorIcon from '../../assets/icons/surfStronautIcon.png'
 import styles from './ErrorPage.module.css'
 import { useRouteError } from 'react-router-dom'
 
@@ -9,7 +10,7 @@ function ErrorPage () {
     <div className={styles.errorContainer}>
       <img
         className={styles.errorImg}
-        src='../../assets/icons/surfStronautIcon.png'
+        src={errorIcon}
         alt='Surfing Astronaut'
       />
       <p className={styles.errorText}>ERROR</p>

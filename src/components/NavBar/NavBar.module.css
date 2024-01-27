@@ -7,6 +7,7 @@
 .linksContainer {
   composes: flexRowContainer fontSubTitle from '../../../styles/main.module.css';
   justify-content: space-around;
+  align-items: center;
   min-width: 40%;
   flex-grow: 2;
 }
@@ -18,10 +19,19 @@
 .linkItem {
   composes: fontSubTitle from '../../../styles/main.module.css';
   font-style: italic;
-  font-size: 0.8rem;
 }
 
 .linkItem:hover {
   text-shadow: -4px 4px var(--secondary-text-shadow);
   cursor: pointer;
+}
+
+.gitLink {
+  margin: 0.3rem 0px;
+}
+
+@media (min-width: 0px) {
+  .fontSize {
+    font-size: 0.6rem;
+  }
 }

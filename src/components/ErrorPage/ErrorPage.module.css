@@ -1,4 +1,3 @@
-
 @import '../../../styles/main.module.css';
 
 @keyframes rotate {  
@@ -20,7 +19,8 @@
 }
 
 .errorContainer {
-  composes: webSectionContainer from '../../../styles/main.module.css';
+  composes: webImageContainer from '../../../styles/main.module.css';
+  flex-direction: column;
 }
 
 .errorImg {
@@ -30,4 +30,9 @@
 
 .errorText {
   compsoes: fontTitle from '../../../styles/main.module.css';
+  color: var(--primary-text);
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 900;
+  text-shadow: -4px 4px var(--secondary-text-shadow);
 }
