@@ -1,11 +1,24 @@
 .aboutMainContainer {
   box-sizing: border-box;
-  width: 98vw;
-  height: 98vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+}
+
+.aboutBgImgContainer {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('../../assets/bgImages/bg-1.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .aboutDisplayContainer {
@@ -16,6 +29,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
   background-color: var(--transparent-background);
   backdrop-filter: blur(8px);
 }

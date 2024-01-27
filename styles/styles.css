@@ -3,7 +3,8 @@ root
   body
     app
       main
-        display
+        bg img container
+          display
 body 
   - is 100% v and h
   - backgorund color is always there
@@ -35,15 +36,15 @@ display
   --secondary-background: #22092C; /* dark purple */
   --accent-background: #1D2B53; /* beige blue */
   --extra-background: #000000; /* black */
-  --transparent-background: #7E255399; /* pastel purple */
+  --transparent-background: #1D2B5399; /* pastel purple */
 
 /******************************   border colors ******************************/
   --primary-border: #720455; /* hot purple */
 }
 
-/* * { */
-/*   min-width: 0px; */
-/* } */
+* {
+  min-width: 0px;
+}
 
 html {
   padding: 0px;
@@ -51,12 +52,13 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   height: 100%;
   width: 100%;
   padding: 0px;
   margin: 0px;
   background-color: var(--primary-background);
-  overflow-x: hidden;
+  transition: background-color 0.3s ease;
 }
 
 /* WebKit Browsers (Chrome, Safari, etc.) */

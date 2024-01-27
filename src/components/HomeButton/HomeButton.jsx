@@ -27,9 +27,10 @@ function HomeButton () {
   return (
     <div>
       {visibleScrollHome && (
-        <div onClick={scrollToHome}>
+        <div className='homeBtnContainer'>
           <img
             className='homeBtn'
+            onClick={scrollToHome}
             src={homeIcon}
             alt='HOME'
           />

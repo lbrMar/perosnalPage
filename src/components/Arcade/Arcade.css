@@ -1,11 +1,35 @@
 .arcadeMainContainer {
   box-sizing: border-box;
   overflow: hidden;
-  width: 98vw;
-  height: 98vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-  padding: 1rem;
+  gap: 1rem;
+}
+
+.arcadeBgImgContainer {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('../../assets/bgImages/bg-3.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.arcadeDisplayContainer {
+  box-sizing: border-box;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--transparent-background);
+  backdrop-filter: blur(8px);
 }

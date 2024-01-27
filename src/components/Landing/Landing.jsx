@@ -23,17 +23,19 @@ function Landing () {
 
   return (
     <div className='landingMainContainer'>
-      <div className='landingDisplayContainer'>
-        {windowWidth > 700
-          ? (
-            <AsciiArt />
-            )
-          : (
-            <AsciiArtMobile />
-            )}
-        <LandingContent />
+      <div className='landingBgImgContainer'>
+        <div className='landingDisplayContainer'>
+          {windowWidth > 700
+            ? (
+              <AsciiArt />
+              )
+            : (
+              <AsciiArtMobile />
+              )}
+          <LandingContent />
+        </div>
+        <ScrollButton />
       </div>
-      <ScrollButton />
     </div>
   )
 }

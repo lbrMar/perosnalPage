@@ -31,11 +31,10 @@ function ScrollButton () {
   return (
     <div>
       {visibleScrollDown && (
-        <div
-          className='scrollDownBtn'
-          onClick={scrollToNextSection}
-        >
+        <div className='scrollDownBtnContainer'>
           <img
+            className='scrollDownBtn'
+            onClick={scrollToNextSection}
             src={downArrowIcon}
             alt='DOWN'
           />

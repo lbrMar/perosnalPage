@@ -5,10 +5,14 @@ function Contact () {
   return (
     <>
       <div className='contactMainContainer'>
-        <div className='contactDisplayContainer' />
-        <HomeButton />
+        <div className='contactBgImgContainer'>
+          <div className='contactDisplayContainer' />
+          <div className='contactFooterContainer'>
+            <HomeButton />
+            <p className='footerText'>@lbrm</p>
+          </div>
+        </div>
       </div>
-      <p className='footerText'>@lbrm</p>
     </>
   )
 }

@@ -1,4 +1,5 @@
 import './Arcade.css'
+import ScrollButton from '../ScrollButton/ScrollButton'
 import {
   Outlet
 } from 'react-router-dom'
@@ -6,8 +7,11 @@ import {
 function Arcade () {
   return (
     <div className='arcadeMainContainer'>
-      <div className='arcadeDisplayContainer'>
-        <Outlet />
+      <div className='arcadeBgImgContainer'>
+        <div className='arcadeDisplayContainer'>
+          <Outlet />
+        </div>
+        <ScrollButton />
       </div>
     </div>
   )
