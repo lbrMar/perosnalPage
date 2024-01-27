@@ -1,7 +1,7 @@
-import styles from './Landing.module.css'
+import './Landing.css'
 import AsciiArt from './AsciiArt/AsciiArt'
 import AsciiArtMobile from './AsciiArt/AsciiArtMobile'
-import InfoFetch from './InfoFetch/InfoFetch'
+import LandingContent from './LandingContent/LandingContent'
 import ScrollButton from '../ScrollButton/ScrollButton'
 
 import { useEffect, useState } from 'react'
@@ -22,8 +22,8 @@ function Landing () {
   }, [])
 
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.displayContainer}>
+    <div className='landingMainContainer'>
+      <div className='landingDisplayContainer'>
         {windowWidth > 1050
           ? (
             <AsciiArt />
@@ -31,7 +31,7 @@ function Landing () {
           : (
             <AsciiArtMobile />
             )}
-        <InfoFetch />
+        <LandingContent />
       </div>
       <ScrollButton />
     </div>

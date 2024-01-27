@@ -1,5 +1,5 @@
+import './ScrollButton.css'
 import downArrowIcon from '../../assets/icons/icon-down-arrow.png'
-import styles from './ScrollButton.module.css'
 import { useScrollContext } from '../../context'
 
 function ScrollButton () {
@@ -32,7 +32,7 @@ function ScrollButton () {
     <div>
       {visibleScrollDown && (
         <div
-          className={styles.scrollButton}
+          className='scrollDownBtn'
           onClick={scrollToNextSection}
         >
           <img

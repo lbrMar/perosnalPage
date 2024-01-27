@@ -1,0 +1,10 @@
+.aboutMainContainer {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100vj;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

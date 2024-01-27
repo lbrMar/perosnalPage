@@ -1,0 +1,11 @@
+.arcadeMainContainer {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+}

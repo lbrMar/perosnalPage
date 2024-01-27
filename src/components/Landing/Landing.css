@@ -1,0 +1,24 @@
+.landingMainContainer {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.landingDisplayContainer {
+  box-sizing: border-box;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--transparent-background);
+  backdrop-filter: blur(8px);
+}

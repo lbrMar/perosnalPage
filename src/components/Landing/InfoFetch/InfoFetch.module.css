@@ -1,9 +1,0 @@
-@import '../../../../styles/main.module.css';
-
-.flexColumnContainer {
-  composes: flexColumnContainer from '../../../../styles/main.module.css';
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-

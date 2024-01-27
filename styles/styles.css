@@ -1,3 +1,23 @@
+/* Containers are nested
+root
+  body
+    app
+      main
+        display
+body 
+  - is 100% v and h
+  - backgorund color is always there
+App
+  - contains scoll
+main 
+  - is 100vh and 100 vw
+  - do not add margin or padding
+  - contains the bg image
+  - meant to be a section of the page
+display
+  - style accordingling
+ */
+
 :root {
   font-family: 'Ubuntu Mono', Monaco, 'Courier New', Courier, monospace;
   line-height: 0.8;
@@ -6,7 +26,7 @@
 /*******************************   font colors *******************************/
   --primary-text: #FAEF5D; /* bright yellow */
   --secondary-text: #FFF5E0; /* pale biege */
-  --primary-text-shadow: #720455; /* vibrant red */
+  --primary-text-shadow: #0174BE; /* vibrant red */
   --secondary-text-shadow: #015D98; /* pale blue */
 
 /****************************   background colors ****************************/
@@ -14,40 +34,34 @@
   --secondary-background: #22092C; /* dark purple */
   --accent-background: #1D2B53; /* beige blue */
   --extra-background: #000000; /* black */
-  --transparent-background: #1D2B5399; /* blueish */
- 
+  --transparent-background: #7E255399; /* pastel purple */
+
 /******************************   border colors ******************************/
   --primary-border: #720455; /* hot purple */
 }
 
-* {
-  min-width: 0px;
-}
+/* * { */
+/*   min-width: 0px; */
+/* } */
 
 html {
   padding: 0px;
   margin: 0px;
 }
 
-/* 100% to always cover entire window background */
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
   padding: 0px;
   margin: 0px;
   background-color: var(--primary-background);
-  transition: background-color 0.5s ease;
 }
 
 /******************************** bakcgrounds ********************************/
 
 .blurBackground {
   background-color: var(--transparent-background);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
 }
 
 /******************************** font styles ********************************/
@@ -55,56 +69,48 @@ body {
 
 .fontMain {
   font-style: italic;
-  font-weight: 900;
+  font-weight: 500;
   color: var(--secondary-text);
-  margin: 0%;
 }
 
 .fontTitle {
   color: var(--primary-text);
   font-style: italic;
   font-weight: 900;
-  text-shadow: -4px 4px var(--secondary-text-shadow);
+  text-shadow: -4px 4px var(--primary-text-shadow);
 }
 
 .fontSubTitle {
   color: var(--primary-text);
-  font-weight: 900;
+  font-weight: 700;
+  text-shadow: -4px 4px var(--secondary-text-shadow);
 }
 
 /**************************** margin and padding *****************************/
 /************** padding/margin: [top] [right] [bottom] [left]; ***************/
 
-.paddingNone{
-  padding: 0%;
-}
-
-.paddingSoft {
-  padding: 0.5%;
-}
-
-.paddingMid {
+.paddingWeak {
   padding: 1%;
 }
 
+.paddingMid {
+  padding: 3%;
+}
+
 .paddingHard {
-  padding: 2%;
+  padding: 5%;
 }
 
-.marginNone{
-  margin: 0%;
-}
-
-.marginSoft {
-  margin: 0.5%;
-}
-
-.marginMid {
+.marginWeak {
   margin: 1%;
 }
 
+.marginMid {
+  margin: 3%;
+}
+
 .marginHard {
-  margin: 2%;
+  margin: 5%;
 }
 
 /******************************* border styles *******************************/
@@ -130,11 +136,6 @@ body {
 
 /*********************************** flex ***********************************/
 /********** justify-content: [main-axis] align-items: [cross-axis] **********/
-
-.flexContainer {
-  display: flex;
-  gap: 1%;
-}
 
 .flexRowContainer {
   display: flex;
@@ -165,17 +166,22 @@ body {
 
 /******************************** containers ********************************/
 
-/* to use in app entery point */
-.mainWrapperContainer {
-  overflow-y: auto;
+.mainContainer {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
 }
 
-/* covers entire view port, ensure margin + width or height summ 100 */
 .pageContainer {
   box-sizing: border-box;
-  width: 90vw;
-  height: 96vh;
-  margin: 2vh;
+  width: 90%;
+  height: 90%;
+}
+
+.displayContainer {
+  box-sizing: border-box;
+  width: 80%;
+  height: 80%;
 }
 
 .contentContainer {
@@ -184,35 +190,16 @@ body {
   height: 100%;
 }
 
-@media screen and (min-width: 0px) {
-  .displayContainer {
-    box-sizing: border-box;
-    width: 98%;
-    height: 98%;
-  }
-}
-
-@media screen and (min-width: 325px) {
-  .displayContainer {
-    box-sizing: border-box;
-    width: 90%;
-    height: 80%;
-  }
-}
-
-
 /***************************** fixed containers *****************************/
 
-/* play around with left, width and translate to get centered */
 .fixedTopBar {
   box-sizing: border-box;
   position: fixed;
   z-index: 1000;
   overflow: hidden;
   top: 0;
-  left: 49%;
-  width: 98%;
-  transform: translate(-50%, 0%);
+  left: 0;
+  width: 100%;
 }
 
 .fixedBottomBar {
@@ -222,33 +209,53 @@ body {
   overflow: hidden;
   bottom: 0;
   left: 0;
-  width: 96%;
+  width: 100%;
 }
 
 
 /**************************** composed containers ****************************/
 
-.webMainContainer {
+.webSectionContainer {
   composes:
-    mainWrapperContainer
-    flexColumnContainer
-    flexCenter;
+    windowContainer
+    flexRowContainer
+    flexCenter
+    marginHard
+    paddingHard;
 }
 
 .webImageContainer {
   composes:
     pageContainer
-    flexContainer
+    flexRowContainer
     flexCenter
+    marginHard
+    paddingHard
     borderNone
 }
 
-.webDisplayContainer {
-  composes:
-    displayContainer
-    paddingMid
-    borderNone
-    blurBackground;
+@medica screen and (min-width: 0px) {
+  .webDisplayContainer {
+    composes:
+      displayContainer
+      flexColumnContainer
+      flexCenter
+      marginWeak
+      paddingWeak
+      borderModern
+      blurBackground;
+  }
+}
+
+@medica screen and (min-width: 600px) {
+  .webDisplayContainer {
+    composes:
+      displayContainer
+      flexRowContainer
+      flexCenter
+      borderModern
+      blurBackground;
+  }
 }
 
 .webTopNavBar {
@@ -256,8 +263,6 @@ body {
     fixedTopBar
     flexRowContainer
     flexRowSpaceBetween
-    marginMid
-    paddingSoft
-    borderNone
+    borderModern
     blurBackground;
 }

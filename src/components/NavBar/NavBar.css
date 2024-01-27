@@ -1,0 +1,58 @@
+.navBarMainContainer {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px 5px 0px 5px;
+  background-color: var(--transparent-background);
+  backdrop-filter: blur(8px);
+}
+
+.titleItem {
+  color: var(--primary-text);
+  font-style: italic;
+  font-weight: 900;
+  text-shadow: -4px 4px var(--primary-text-shadow);
+  margin: 6px;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 0px) {
+  .linkItem {
+    color: var(--primary-text);
+    font-style: italic;
+    font-weight: 900;
+    font-size: 0.5rem;
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 250px) {
+  .linkItem {
+    font-size: 0.7rem;
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .linkItem {
+    font-size: 1rem;
+    margin: 6px;
+  }
+}
+
+.linkItem:hover {
+  text-shadow: -4px 4px var(--secondary-text-shadow);
+}

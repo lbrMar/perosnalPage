@@ -1,15 +1,15 @@
+import './LoadingPage.css'
 import loadingIcon from '../../assets/icons/surfStronautIcon.png'
-import styles from './LoadingPage.module.css'
 
 function LoadingPage () {
   return (
-    <div className={styles.loadingContainer}>
+    <div className='loadingMainContainer'>
       <img
-        className={styles.loadingImg}
+        className='loadingImg'
         src={loadingIcon}
         alt='Surfing Astronaut'
       />
-      <p className={styles.loadingText}>LOADING</p>
+      <p className='loadingContent'>LOADING</p>
     </div>
   )
 }

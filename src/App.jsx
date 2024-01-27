@@ -1,4 +1,4 @@
-import styles from './App.module.css'
+import './App.css'
 import ScrollEffectHandler from './scrollEffects/ScrollEffectHandler'
 import LoadingPage from './components/LoadingPage/LoadingPage'
 import NavBar from './components/NavBar/NavBar'
@@ -7,7 +7,6 @@ import About from './components/About/About'
 import Arcade from './components/Arcade/Arcade'
 import Contact from './components/Contact/Contact'
 import HomeButton from './components/HomeButton/HomeButton'
-import Footer from './components/Footer/Footer'
 import { useEffect, useState } from 'react'
 
 function App () {
@@ -28,7 +27,7 @@ function App () {
           <LoadingPage />
           )
         : (
-          <div className={styles.mainContainer}>
+          <div className='appContainer'>
             <ScrollEffectHandler />
             <NavBar />
             <Landing />
@@ -36,7 +35,6 @@ function App () {
             <Arcade />
             <Contact />
             <HomeButton />
-            <Footer />
           </div>
           )}
     </div>

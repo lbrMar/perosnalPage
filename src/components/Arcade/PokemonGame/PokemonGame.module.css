@@ -1,6 +1,0 @@
-@import '../../../../styles/main.module.css';
-
-.gameContainer {
-  composes: felxColumnContainer flexCenter from '../../../../styles/main.module.css';
-  width: 100%;
-}

@@ -1,16 +1,12 @@
-import styles from './Arcade.module.css'
-import GameMenu from './GameMenu/GameMenu'
+import './Arcade.css'
 import {
-  Outlet,
-  useNavigation
+  Outlet
 } from 'react-router-dom'
 
 function Arcade () {
-  const navigation = useNavigation()
-
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.displayContainer}>
+    <div className='arcadeMainContainer'>
+      <div className='arcadeDisplayContainer'>
         <Outlet />
       </div>
     </div>

@@ -1,12 +1,12 @@
-import styles from './Contact.module.css'
+import './Contact.css'
 
 function Contact () {
   return (
     <>
-      <div className={styles.pageContainer}>
-        <div className={styles.displayContainer} />
+      <div className='contactMainContainer'>
+        <div className='contactDisplayContainer' />
       </div>
-      <p className={styles.footer}>@lbrm</p>
+      <p className='footerText'>@lbrm</p>
     </>
   )
 }

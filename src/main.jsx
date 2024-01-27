@@ -1,19 +1,15 @@
-import '../styles/main.module.css'
-
-/** ************************ import react functions **************************/
+import '../styles/styles.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom'
-
-/** *************************** import components *****************************/
-import { ScrollProvider } from './context'
 import App from './App.jsx'
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
 import PokemonGame from './components/Arcade/PokemonGame/PokemonGame.jsx'
 import GameMenu from './components/Arcade/GameMenu/GameMenu.jsx'
+import {
+  createBrowserRouter,
+  RouterProvider
+} from 'react-router-dom'
+import { ScrollProvider } from './context'
 
 const router = createBrowserRouter([
   {

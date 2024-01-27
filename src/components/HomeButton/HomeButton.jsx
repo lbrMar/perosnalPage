@@ -1,5 +1,4 @@
 import homeIcon from '../../assets/icons/icon-home.png'
-import styles from './HomeButton.module.css'
 import { useScrollContext } from '../../context'
 
 function HomeButton () {
@@ -29,7 +28,7 @@ function HomeButton () {
       {visibleScrollHome && (
         <div onClick={scrollToHome}>
           <img
-            className={styles.homeButton}
+            className='homeBtn'
             src={homeIcon}
             alt='HOME'
           />

@@ -1,5 +1,5 @@
+import './ErrorPage.css'
 import errorIcon from '../../assets/icons/surfStronautIcon.png'
-import styles from './ErrorPage.module.css'
 import { useRouteError } from 'react-router-dom'
 
 function ErrorPage () {
@@ -7,13 +7,13 @@ function ErrorPage () {
   console.error(error)
 
   return (
-    <div className={styles.errorContainer}>
+    <div className='errorMainContainer'>
       <img
-        className={styles.errorImg}
+        className='errorImg'
         src={errorIcon}
         alt='Surfing Astronaut'
       />
-      <p className={styles.errorText}>ERROR</p>
+      <p className='errorContent'>ERROR</p>
       <i>{error.statusText || error.message}</i>
     </div>
   )

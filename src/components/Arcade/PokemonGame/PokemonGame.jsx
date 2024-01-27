@@ -1,13 +1,10 @@
-import styles from './PokemonGame.module.css'
-
 function PokemonGame () {
   return (
-    <div className={styles.gameContainer}>
-      <div className={styles.titleContainer}>
+    <div className='pokeGameContainer'>
+      <div className='pokeTitleContainer'>
         <h3>POKEMON GAME</h3>
         <p>----------------------</p>
       </div>
-
     </div>
   )
 }

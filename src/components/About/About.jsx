@@ -1,13 +1,10 @@
-import styles from './About.module.css'
+import './About.css'
 
 function About () {
   return (
-    <div className={styles.pageContainer}>
-      <div className={styles.displayContainer}>
-        <div className={styles.manContainer}>
-          <h1 />
-        </div>
-        <div className={styles.termContainer} />
+    <div className='aboutMainContainer'>
+      <div className='aboutDisplayContainer'>
+        <h1>about </h1>
       </div>
     </div>
   )

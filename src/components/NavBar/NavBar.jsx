@@ -1,10 +1,12 @@
-import styles from './NavBar.module.css'
+import './NavBar.css'
 import { useScrollContext } from '../../context'
 
 function NavBar () {
   const {
     sectionHeights
   } = useScrollContext()
+
+  const gitLink = '// git'
 
   const linkItems = [
     '// home',
@@ -23,31 +25,29 @@ function NavBar () {
   }
 
   return (
-    <div>
-      <div className={styles.flexRowContainer}>
-        <h2 className={styles.titleItem}>@lbrm</h2>
-        <div className={styles.linksContainer}>
-          {linkItems.map((item, index) => (
-            <h3
-              className={`${styles.linkItem} ${styles.fontSize}`}
-              key={index}
-              onClick={() => scrollOnLinkClick(index)}
-            >
-              {item}
-            </h3>
-          ))}
-          <h3 className={styles.linkItem}>
-            <a
-              className={`${styles.linkItem} ${styles.fontSize} ${styles.gitLink}`}
-              href='https://github.com/lbrMar'
-              target='_blank'
-              rel='noopener noreferrer'
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              // git
-            </a>
+    <div className='navBarMainContainer'>
+      <h2 className='titleItem'>@lbrm</h2>
+      <div className='linksContainer'>
+        {linkItems.map((item, index) => (
+          <h3
+            className='linkItem'
+            key={index}
+            onClick={() => scrollOnLinkClick(index)}
+          >
+            {item}
           </h3>
-        </div>
+        ))}
+        <h3 className='linkItem'>
+          <a
+            className='linkItem'
+            href='https://github.com/lbrMar'
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            {gitLink}
+          </a>
+        </h3>
       </div>
     </div>
   )
