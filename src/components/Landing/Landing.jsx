@@ -1,5 +1,4 @@
 import styles from './Landing.module.css'
-/** *************************** import components *****************************/
 import AsciiArt from './AsciiArt/AsciiArt'
 import AsciiArtMobile from './AsciiArt/AsciiArtMobile'
 import InfoFetch from './InfoFetch/InfoFetch'
