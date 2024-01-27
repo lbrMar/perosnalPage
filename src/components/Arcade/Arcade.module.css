@@ -2,7 +2,7 @@
 
 .pageContainer {
   composes: webImageContainer from '../../../styles/main.module.css';
-  background-image: url('../../../dist/images/personalPageBG3.jpg');
+  background-image: url('../../assets/bgImages/bg-3.jpeg');
 }
 
 .displayContainer {
