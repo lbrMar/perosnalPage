@@ -9,7 +9,7 @@ function ErrorPage () {
     <div className={styles.errorContainer}>
       <img
         className={styles.errorImg}
-        src='../../../dist/images/loadingPageSurfstronaut.png'
+        src='../../assets/icons/surfStronautIcon.png'
         alt='Surfing Astronaut'
       />
       <p className={styles.errorText}>ERROR</p>

@@ -5,7 +5,7 @@ function LoadingPage () {
     <div className={styles.loadingContainer}>
       <img
         className={styles.loadingImg}
-        src='../../../../dist/images/loadingPageSurfstronaut.png'
+        src='../../assets/icons/surfStronautIcon.png'
         alt='Surfing Astronaut'
       />
       <p className={styles.loadingText}>LOADING</p>
