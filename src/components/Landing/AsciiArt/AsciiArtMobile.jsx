@@ -1,6 +1,6 @@
 function AsciiArtMobile () {
   return (
-    <div className='asciiArtSmallContainer'>
+    <div className='asciiImgContainer'>
       <pre className='asciiPre'> .:..  :.. .. . .:.---              :== -..  :... : .  ::</pre>
       <pre className='asciiPre'>..  ..- .. .   -:::                     -:.    :..:.  .. </pre>
       <pre className='asciiPre'>..: .      : @ ..                           @    . . . - </pre>

@@ -41,3 +41,9 @@
   align-items: center;
   margin-top: 5px;
 }
+
+.footerText {
+  color: var(--primary-text);
+  font-style: italic;
+  font-weight: 900;
+}
