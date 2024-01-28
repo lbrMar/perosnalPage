@@ -30,6 +30,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
   background-color: var(--transparent-background);
   backdrop-filter: blur(8px);
 }
