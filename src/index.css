@@ -2,10 +2,7 @@
   font-family: monospace, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--text);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,19 +10,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
-
 /* For WebKit browsers (Chrome, Safari) */
-/* display set to none */
-/* prefer custom scroll bar component */
-
 ::-webkit-scrollbar {
-  display: none;
+  background-color: var(--base);
+  width: 6px;
+}
+ 
+::-webkit-scrollbar-track {
+  background-color: var(--base);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: var(--iris);
+  border-radius: 6px;
 }
 
 body {

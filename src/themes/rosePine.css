@@ -1,0 +1,39 @@
+/* dark theme, rose-pine-moon */
+:root {
+  --base: #232136; /* Black */
+  --surface: #2a273f; /* DarkPurple */
+  --overlay: #393552; /* DarkBlueGray */
+  --muted: #6e6a86; /* GrayishPurple */
+  --subtle: #908caa; /* LightBlueGray */
+  --text: #e0def4; /* LightGray */
+  --love: #eb6f92; /* Pink */
+  --gold: #f6c177; /* LightOrange */
+  --rose: #ea9a97; /* LightSalmon */
+  --pine: #3e8fb0; /* LightBlue */
+  --foam: #9ccfd8; /* LightCyan */
+  --iris: #c4a7e7; /* LightPurple */
+  --highlightLow: #2a283e; /* DarkPurple */
+  --highlightMed: #44415a; /* GrayishPurple */
+  --highlightHigh: #56526e; /* LightPurple */
+}
+
+/* light theme, rose-pine-dawn */
+@media (prefers-color-scheme: light) {
+  :root {
+    --base: #faf4ed; /* Cream */
+    --surface: #fffaf3; /* LightCream */
+    --overlay: #f2e9e1; /* LightBeige */
+    --muted: #9893a5; /* GrayishLavender */
+    --subtle: #797593; /* DarkGrayishLavender */
+    --text: #575279; /* DarkLavender */
+    --love: #b4637a; /* Mauve */
+    --gold: #ea9d34; /* Mustard */
+    --rose: #d7827e; /* Terracotta */
+    --pine: #286983; /* DeepBlue */
+    --foam: #56949f; /* TealBlue */
+    --iris: #907aa9; /* DarkLavender */
+    --highlightLow: #f4ede8; /* LightCream */
+    --highlightMed: #dfdad9; /* LightGrayishLavender */
+    --highlightHigh: #cecacd; /* LightLavender */
+  }
+}
