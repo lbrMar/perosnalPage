@@ -1,3 +1,5 @@
+/* use grid for the main container */
+/* use media queries to rearrange for mobile vs desktop */
 .landingPageContainer {
   box-sizing: border-box;
   width: 100vw;

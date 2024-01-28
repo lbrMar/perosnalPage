@@ -20,15 +20,26 @@
   }
 }
 
+/* For WebKit browsers (Chrome, Safari) */
+/* display set to none */
+/* prefer custom scroll bar component */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
   display: flex;
   place-items: center;
-  width: 100vw;
-  height: 100vh;
   background-image: url(assets/bgImages/pine-blue-bg.jpg); /* replace with path to your image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-
