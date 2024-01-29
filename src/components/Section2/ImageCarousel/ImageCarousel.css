@@ -1,4 +1,5 @@
 .carouselImageContainer {
+  background-color: var(--base-transparent);
   width: 80%;
   height: 80%;
   display: flex;

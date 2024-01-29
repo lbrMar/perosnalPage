@@ -6,18 +6,25 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
-import App from './App.jsx'
-import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
 import {
   ScrollProvider,
   WindowProvider
 } from './context'
+import App from './App.jsx'
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
+import ArcadeMenu from './components/Section3/ArcadeMenu/ArcadeMenu.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <ArcadeMenu />
+      }
+    ]
   }
 ])
 

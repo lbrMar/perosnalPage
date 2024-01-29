@@ -5,7 +5,6 @@ const Section2 = () => {
   return (
     <div className='section2MainContainer'>
       <ImageCarousel />
-      <p>Test</p>
     </div>
   )
 }
