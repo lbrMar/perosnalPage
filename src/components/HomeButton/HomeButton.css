@@ -1,8 +1,0 @@
-.homeBtn {
-  transition: transform 0.2s ease;
-}
-
-.homeBtn:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-}
