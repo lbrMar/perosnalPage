@@ -1,0 +1,16 @@
+/* the app container is for the rest of the app to live input */
+/* it have horizontal scroll and max width or 100vw */
+/* accounts for scroll bar overflow on some web browsers with overflow-x */
+.appContainer {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
