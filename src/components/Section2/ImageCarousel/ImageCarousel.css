@@ -1,0 +1,16 @@
+.carouselImageContainer {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+}
+
+.carouselImage {
+  max-width: 400px;
+  max-height: 400px;
+  image-orientation: from-image;
+  border-radius: 4px;
+}
