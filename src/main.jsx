@@ -13,6 +13,7 @@ import {
 import App from './App.jsx'
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
 import ArcadeMenu from './components/Section3/ArcadeMenu/ArcadeMenu.jsx'
+import PokemonGame from './components/Section3/PokemonGame/PokemonGame.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <ArcadeMenu />
+      },
+      {
+        path: '/pokemonGame',
+        element: <PokemonGame />
       }
     ]
   }
