@@ -1,5 +1,6 @@
 import './App.css'
 import LandingPage from './components/LandingPage/LandingPage'
+import Section1 from './components/Section1/Section1'
 import Section2 from './components/Section2/Section2'
 import Section3 from './components/Section3/Section3'
 import LoadingPage from './components/LoadingPage/LoadingPage'
@@ -26,6 +27,7 @@ function App () {
         : (
           <>
             <LandingPage />
+            <Section1 />
             <Section2 />
             <Section3 />
             <Footer />
