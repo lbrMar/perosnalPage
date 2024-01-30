@@ -22,15 +22,10 @@ const ArcadeProvider = ({ children }) => {
     'pokemonGame'
   ]
 
-  // Function to set or update the high score for a specific game
-  const setHighScore = (gameName, score) => {
-    setHighScores((prevScores) => {
-      return {
-        ...prevScores,
-        [gameName]: score
-      }
-    })
-  }
+  const setHighScore = (gameName, score) => setHighScores((prevScores) => ({
+    ...prevScores,
+    [gameName]: score
+  }))
 
   // Function to get the high scores for a specific game
   const getHighScore = (gameName) => {

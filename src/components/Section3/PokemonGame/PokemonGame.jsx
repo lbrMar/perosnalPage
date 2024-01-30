@@ -4,20 +4,56 @@ import chevronsLeft from '../../../assets/icons/featherIcons/chevrons-left.svg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { usePokeGameContext } from '../../../context/PokeGameContext.jsx'
+import { useArcadeContext } from '../../../context/ArcadeContext.jsx'
 
 const PokemonGame = () => {
-  const [gameOn, setGameOn] = useState(false)
+  const [gameState, setGameState] = useState('menu')
+  const { setHighScore } = useArcadeContext
   const {
     pokemonData,
     randPokeData,
     shufflePokeData,
     currentScore,
-    pokeLevel
+    setCurrentScore,
+    pokeLevel,
+    setSelectedPokemon,
+    checkSelectedPokemon,
+    checkLevel,
+    shuffleOnClick
   } = usePokeGameContext()
 
   const toggleGameOn = (pokemonData) => {
-    setGameOn(true)
+    setGameState('game')
     shufflePokeData(pokemonData)
+  }
+
+  const toggleMenu = () => {
+    setGameState('menu')
+  }
+
+  const toggleWinner = () => {
+    setGameState('winner')
+  }
+
+  const toggleLoser = () => {
+    setGameState('loser')
+  }
+
+  const onPokeClick = (event, pokemon) => {
+    event.preventDefault()
+
+    const isGoodGuess = checkSelectedPokemon(pokemon)
+
+    if (isGoodGuess === true) {
+      setCurrentScore((prev) => prev + 1)
+      checkLevel()
+      shuffleOnClick()
+    } else {
+      setHighScore('pokemonGame', currentScore)
+      setCurrentScore(0)
+      setSelectedPokemon([])
+      toggleLoser()
+    }
   }
 
   return (
@@ -34,24 +70,47 @@ const PokemonGame = () => {
         <h2>Score: {currentScore}</h2>
       </div>
       <div className='pokeGameContainer'>
-        {gameOn === false
-          ? (
+        {gameState === 'menu' &&
+          (
             <div className='pokeMenuContainer'>
               <h3>INSTRUCTIONS</h3>
               <p>{loremIpsum}</p>
               <button onClick={() => toggleGameOn(pokemonData)}>START</button>
             </div>
-            )
-          : (
+          )}
+        {gameState === 'game' &&
+          (
             <div className='pokePlayContainer'>
-              {randPokeData[pokeLevel] && randPokeData[pokeLevel].map((pokemon, index) => (
-                <div className='pokeItemContainer' key={index}>
+              {randPokeData[pokeLevel] && randPokeData[pokeLevel - 1].map((pokemon, index) => (
+                <div
+                  onClick={(event) => onPokeClick(event, pokemon.name)}
+                  className='pokeItemContainer'
+                  key={index}
+                >
                   <img src={pokemon.sprites.front_default} />
                   <p>{pokemon.name}</p>
                 </div>
               ))}
             </div>
-            )}
+          )}
+        {gameState === 'loser' &&
+          (
+            <div>
+              <p>You lose</p>
+              <button onClick={toggleMenu}>
+                MENU
+              </button>
+            </div>
+          )}
+        {gameState === 'winner' &&
+          (
+            <div>
+              <p>You are the very best, like no one ever was</p>
+              <button onClick={toggleMenu}>
+                MENU
+              </button>
+            </div>
+          )}
       </div>
     </div>
   )
