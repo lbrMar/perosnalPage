@@ -1,5 +1,8 @@
 import './Section3.css'
-import { ArcadeProvider } from '../../context'
+import {
+  ArcadeProvider,
+  PokeGameProvider
+} from '../../context'
 import { Outlet } from 'react-router-dom'
 
 const Section3 = () => {
@@ -7,7 +10,9 @@ const Section3 = () => {
     <div className='section3MainContainer'>
       <div className='arcadeDisplayContainer'>
         <ArcadeProvider>
-          <Outlet />
+          <PokeGameProvider>
+            <Outlet />
+          </PokeGameProvider>
         </ArcadeProvider>
       </div>
     </div>
