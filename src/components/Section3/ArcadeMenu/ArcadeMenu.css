@@ -26,6 +26,10 @@
   text-shadow: 2px 0px 2px var(--love);
 }
 
+.activeMenu {
+  text-shadow: 2px 0px 2px var(--love);
+}
+
 .scoresTitle {
   width: 10vw;
   text-align: center;

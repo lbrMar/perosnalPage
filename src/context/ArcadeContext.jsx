@@ -22,10 +22,17 @@ const ArcadeProvider = ({ children }) => {
     'pokemonGame'
   ]
 
-  const setHighScore = (gameName, score) => setHighScores((prevScores) => ({
-    ...prevScores,
-    [gameName]: score
-  }))
+  const setHighScore = (gameName, score) => setHighScores((prevScores) => {
+  // Check if the provided score is higher than the current high score
+    if (score > (prevScores[gameName] || 0)) {
+      return {
+        ...prevScores,
+        [gameName]: score
+      }
+    }
+
+    return prevScores // If the provided score is not higher, keep the existing high scores
+  })
 
   // Function to get the high scores for a specific game
   const getHighScore = (gameName) => {

@@ -19,11 +19,21 @@ const ArcadeMenu = () => {
     <div className='arcadeMenuMainContainer'>
       <div className='arcadeMenuTitleContainer'>
         <div className='menuTitle'>
-          <h1 onClick={onMenuClick}>MENU</h1>
+          <h1
+            className={menuDisplay === 'menu' ? 'activeMenu' : ''}
+            onClick={onMenuClick}
+          >
+            MENU
+          </h1>
         </div>
         <h2>|</h2>
         <div className='scoresTitle'>
-          <h1 onClick={onScoresClick}>HIGH SCORES</h1>
+          <h1
+            className={menuDisplay === 'scores' ? 'activeMenu' : ''}
+            onClick={onScoresClick}
+          >
+            HIGH SCORES
+          </h1>
         </div>
       </div>
       <div>

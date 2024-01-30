@@ -28,7 +28,7 @@ const PokeGameProvider = ({ children }) => {
   }
 
   const checkLevel = () => {
-    if (currentScore / 15 >= pokeLevel) {
+    if (currentScore / 14 >= pokeLevel) {
       setPokeLevel((prev) => prev + 1)
     }
   }

@@ -8,7 +8,7 @@ import { useArcadeContext } from '../../../context/ArcadeContext.jsx'
 
 const PokemonGame = () => {
   const [gameState, setGameState] = useState('menu')
-  const { setHighScore } = useArcadeContext
+  const { setHighScore } = useArcadeContext()
   const {
     pokemonData,
     randPokeData,
@@ -16,6 +16,7 @@ const PokemonGame = () => {
     currentScore,
     setCurrentScore,
     pokeLevel,
+    setPokeLevel,
     setSelectedPokemon,
     checkSelectedPokemon,
     checkLevel,
@@ -39,6 +40,12 @@ const PokemonGame = () => {
     setGameState('loser')
   }
 
+  const onChevronClick = () => {
+    setCurrentScore(0)
+    setSelectedPokemon([])
+    setPokeLevel(1)
+  }
+
   const onPokeClick = (event, pokemon) => {
     event.preventDefault()
 
@@ -49,8 +56,10 @@ const PokemonGame = () => {
       checkLevel()
       shuffleOnClick()
     } else {
-      setHighScore('pokemonGame', currentScore)
+      const score = currentScore
+      setHighScore('pokemonGame', score)
       setCurrentScore(0)
+      setPokeLevel(1)
       setSelectedPokemon([])
       toggleLoser()
     }
@@ -61,6 +70,7 @@ const PokemonGame = () => {
       <div className='pokeTitleContainer'>
         <Link to='/'>
           <img
+            onClick={onChevronClick}
             className='leftIcon'
             src={chevronsLeft}
             alt='Left Arrow'
