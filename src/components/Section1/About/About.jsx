@@ -4,7 +4,9 @@ import loremIpsum from '../../../utils/loremipsum'
 const About = () => {
   return (
     <div className='aboutMainContainer'>
-      <p>{loremIpsum}</p>
+      <div className='aboutTextContainer'>
+        <p>{loremIpsum}</p>
+      </div>
     </div>
   )
 }

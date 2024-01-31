@@ -7,5 +7,16 @@
   justify-content: center;
   align-items: center;
   padding: 3rem;
+}
+
+.aboutTextContainer {
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3rem;
   overflow-y: scroll;
 }

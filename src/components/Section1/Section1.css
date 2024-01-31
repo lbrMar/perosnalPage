@@ -21,6 +21,12 @@
   backdrop-filter: blur(8px);
 }
 
+@media screen and (max-width: 600px) {
+  .section1DisplayContainer {
+    flex-direction: column;
+  }
+}
+
 .listContainer {
   height: 100%;
   width: 25%;
@@ -33,4 +39,16 @@
 
 .personalDetailsContainer {
   flex: 1;
+}
+
+.activeMenu {
+  text-shadow: 2px 0px 2px var(--love);
+}
+
+.listIcon {
+  transition: transform 0.3s ease;
+}
+
+.listIcon:hover {
+  transform: scale(1.2);
 }
