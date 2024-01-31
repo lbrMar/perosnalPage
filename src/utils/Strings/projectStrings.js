@@ -32,4 +32,44 @@ Future Focus:
 Armed with The Odin Project's technical arsenal, I'm ready to tackle advanced projects and continue pushing the boundaries of web development.
 `.trim()
 
-export default odinProjectDescription
+// cs50ProjectDescription.js
+
+const cs50ProjectDescription = `
+Harvard CS50: Introduction to Computer Science
+
+Completing the rigorous CS50 course from Harvard marked a pivotal moment in my journey towards becoming a proficient computer scientist. This immersive program covered a wide array of topics, from the fundamentals of programming to more advanced concepts in algorithms and software development.
+
+Key Takeaways:
+
+- **Programming Foundations:**
+  - Mastered the basics of coding with a strong foundation in languages like C, Python, and SQL.
+
+- **Algorithmic Thinking:**
+  - Developed a deep understanding of algorithms and problem-solving techniques.
+
+- **Web Development Skills:**
+  - Explored the world of web development, creating dynamic and interactive web applications.
+
+- **Software Engineering Practices:**
+  - Gained insights into software engineering best practices, version control, and debugging.
+
+- **Final Project:**
+  - Successfully conceptualized, designed, and implemented a significant final project, showcasing a culmination of acquired skills.
+
+Achievements:
+
+- Completed and excelled in challenging problem sets and assignments.
+- Participated actively in collaborative coding projects and discussions.
+- Demonstrated proficiency in tackling complex programming challenges.
+
+Future Endeavors:
+
+Equipped with the knowledge gained from CS50, I am eager to apply these skills to real-world projects and contribute to the ever-evolving landscape of technology.
+`.trim()
+
+const projectDescriptions = {
+  odinProjectDescription,
+  cs50ProjectDescription
+}
+
+export default projectDescriptions

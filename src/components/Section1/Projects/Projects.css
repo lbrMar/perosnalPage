@@ -19,3 +19,15 @@
   text-align: center;
   overflow-y: scroll;
 }
+
+.projectImage {
+  width: 100px;
+}
+
+.chevronBtn {
+  transition: transform 0.3 ease;
+}
+
+.chevronBtn:hover {
+  transform: scale(1.2);
+}

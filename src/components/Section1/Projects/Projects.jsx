@@ -24,6 +24,7 @@ const Projects = () => {
   return (
     <div className='projectsMainContainer'>
       <img
+        className='chevronBtn'
         onClick={prevImage}
         src={chevronsLeft}
         alt='LEFT'
@@ -35,13 +36,15 @@ const Projects = () => {
           rel='noopener noreferrer'
         >
           <img
+            className='projectImage'
             src={projectItems[projectsSection].image}
             alt={`project ${projectsSection}`}
           />
         </a>
-        <p>{paragraphs}</p>
+        <div>{paragraphs}</div>
       </div>
       <img
+        className='chevronBtn'
         onClick={nextImage}
         src={chevronsRight}
         alt='RIGHT'

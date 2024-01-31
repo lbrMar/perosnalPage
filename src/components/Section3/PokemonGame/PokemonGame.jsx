@@ -71,13 +71,16 @@ const PokemonGame = () => {
         <Link to='/'>
           <img
             onClick={onChevronClick}
-            className='leftIcon'
+            className='leftIcon chevronBtn'
             src={chevronsLeft}
             alt='Left Arrow'
           />
         </Link>
         <h1>POKE GAME</h1>
-        <h2>Score: {currentScore}</h2>
+        <div className='gameTrackerContainer'>
+          <h3 className='gameTrackerItem'>Score: {currentScore}</h3>
+          <h3 className='gameTrackerItem'>Level: {pokeLevel}</h3>
+        </div>
       </div>
       <div className='pokeGameContainer'>
         {gameState === 'menu' &&
