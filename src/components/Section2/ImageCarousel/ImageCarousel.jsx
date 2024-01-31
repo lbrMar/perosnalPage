@@ -7,6 +7,8 @@ import image5 from '../../../assets/carouselImages/personalWeb5.png'
 import image6 from '../../../assets/carouselImages/personalWeb6.png'
 import image7 from '../../../assets/carouselImages/personalWeb7.png'
 import image8 from '../../../assets/carouselImages/personalWeb8.png'
+import chevronRight from '../../../assets/icons/featherIcons/chevrons-right.svg'
+import chevronLeft from '../../../assets/icons/featherIcons/chevrons-left.svg'
 import React, { useState } from 'react'
 
 const ImageCarousel = () => {
@@ -36,15 +38,22 @@ const ImageCarousel = () => {
   return (
     <div className='carouselImageContainer'>
       <img
+        className='chevronBtn'
+        onClick={prevImage}
+        src={chevronLeft}
+        alt='LEFT'
+      />
+      <img
         className='carouselImage'
         src={images[currentImageIndex]}
         alt={`Image ${currentImageIndex + 1}`}
       />
-
-      <div className='carousel-controls'>
-        <button onClick={prevImage}>Previous</button>
-        <button onClick={nextImage}>Next</button>
-      </div>
+      <img
+        className='chevronBtn'
+        onClick={nextImage}
+        src={chevronRight}
+        alt='RIGHT'
+      />
     </div>
   )
 }

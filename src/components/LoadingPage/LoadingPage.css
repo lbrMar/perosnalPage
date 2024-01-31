@@ -7,3 +7,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.loadingImage {
+  width: 400px;
+  animation: rotateBackAndForth 0.8s linear infinite alternate; /* Use the 'alternate' option to make it go back and forth */
+}
+
+@keyframes rotateBackAndForth {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}

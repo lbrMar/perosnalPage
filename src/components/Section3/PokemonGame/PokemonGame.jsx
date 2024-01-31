@@ -69,12 +69,14 @@ const PokemonGame = () => {
     <div className='pokemonGameMainContainer'>
       <div className='pokeTitleContainer'>
         <Link to='/'>
-          <img
-            onClick={onChevronClick}
-            className='leftIcon chevronBtn'
-            src={chevronsLeft}
-            alt='Left Arrow'
-          />
+          <div className='chevronContainer'>
+            <img
+              onClick={onChevronClick}
+              className='leftIcon chevronBtn'
+              src={chevronsLeft}
+              alt='Left Arrow'
+            />
+          </div>
         </Link>
         <h1>POKE GAME</h1>
         <div className='gameTrackerContainer'>
