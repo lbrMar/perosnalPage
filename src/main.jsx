@@ -8,7 +8,8 @@ import {
 } from 'react-router-dom';
 import {
   ScrollProvider,
-  WindowProvider
+  WindowProvider,
+  DisplayModeProvider
 } from './context';
 import App from './App.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
@@ -37,7 +38,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <WindowProvider>
       <ScrollProvider>
-        <RouterProvider router={router} />
+        <DisplayModeProvider>
+          <RouterProvider router={router} />
+        </DisplayModeProvider>
       </ScrollProvider>
     </WindowProvider>
   </React.StrictMode>

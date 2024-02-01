@@ -1,5 +1,5 @@
 .carouselImageContainer {
-  background-color: var(--base-transparent);
+  background-color: var(--base);
   width: 90%;
   height: 90%;
   display: flex;
@@ -7,6 +7,8 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  border-radius: 7px;
+  border: 1px solid var(--gold);
   backdrop-filter: blur(8px);
 }
 
@@ -31,4 +33,12 @@
   max-height: 400px;
   image-orientation: from-image;
   border-radius: 4px;
+}
+
+.chevronCarouselContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }

@@ -56,23 +56,23 @@ const Projects = () => {
             alt='RIGHT'
           />
         )}
+        {innerWidth <= 450 && (
+          <div className='chevronProjectContainer'>
+            <img
+              className='chevronBtn'
+              onClick={prevImage}
+              src={chevronsLeft}
+              alt='LEFT'
+            />
+            <img
+              className='chevronBtn'
+              onClick={nextImage}
+              src={chevronsRight}
+              alt='RIGHT'
+            />
+          </div>
+        )}
       </div>
-      {innerWidth <= 450 && (
-        <div className='chevronProjectContainer'>
-          <img
-            className='chevronBtn'
-            onClick={prevImage}
-            src={chevronsLeft}
-            alt='LEFT'
-          />
-          <img
-            className='chevronBtn'
-            onClick={nextImage}
-            src={chevronsRight}
-            alt='RIGHT'
-          />
-        </div>
-      )}
     </div>
   );
 };

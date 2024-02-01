@@ -17,8 +17,9 @@
 }
 
 .menuTitle {
-  width: 10vw;
+  width: 100px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .menuTitle:hover {
@@ -31,8 +32,9 @@
 }
 
 .scoresTitle {
-  width: 10vw;
+  width: 100px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .scoresTitle:hover {

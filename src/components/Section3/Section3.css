@@ -10,7 +10,7 @@
 }
 
 .arcadeDisplayContainer {
-  background-color: var(--base-transparent);
+  background-color: var(--base);
   box-sizing: border-box;
   width: 90vw;
   height: 90vh;
@@ -18,5 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 7px;
+  border: 1px solid var(--gold);
   backdrop-filter: blur(8px);
 }

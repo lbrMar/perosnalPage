@@ -28,7 +28,6 @@ const ArcadeMenu = () => {
             MENU
           </h1>
         </div>
-        <h2>|</h2>
         <div className='scoresTitle'>
           <h1
             className={menuDisplay === 'scores' 

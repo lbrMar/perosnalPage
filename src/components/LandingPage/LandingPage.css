@@ -1,5 +1,3 @@
-/* use grid for the main container */
-/* use media queries to rearrange for mobile vs desktop */
 .landingPageContainer {
   box-sizing: border-box;
   width: 100vw;
@@ -8,4 +6,67 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.landingDisplayContainer {
+  background-color: var(--base);
+  box-sizing: border-box;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 7px;
+  padding: 1rem;
+  margin-top: 2rem;
+  border: 1px solid var(--gold);
+  backdrop-filter: blur(8px);
+}
+
+pre {
+  font-size: 3px;
+  font-weight: bold;
+  color: var(--rose);
+}
+
+.landingTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.landingTextSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingIcon {
+  width: 25px;
+  margin: 0px 3px 0px 3px;
+  color: var(--pine);
+}
+
+.landingTextMain {
+  margin: 0px;
+  color: var(--iris)
+}
+
+.landingTextSub {
+  margin: 0px;
+  color: var(--pine)
+}
+
+.paletteDisplay {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.paletteIcon {
+  width: 80px;
 }

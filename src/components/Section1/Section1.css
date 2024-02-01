@@ -10,7 +10,7 @@
 }
 
 .section1DisplayContainer {
-  background-color: var(--base-transparent);
+  background-color: var(--base);
   box-sizing: border-box;
   width: 90vw;
   height: 90vh;
@@ -18,6 +18,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  border-radius: 7px;
+  padding: 1rem;
+  border: 1px solid var(--gold);
   backdrop-filter: blur(8px);
 }
 
@@ -35,6 +38,24 @@
   align-items: center;
   justify-content: flex-start;
   margin-top: 2rem;
+}
+
+.projectMenuItem {
+  transition: transform 0.3s ease;
+}
+
+.projectMenuItem:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.mobileListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 4rem;
+
 }
 
 .personalDetailsContainer {

@@ -91,7 +91,7 @@ const Section1 = () => {
             </div>
           )
           : (
-          <div>
+          <div className='mobileListContainer'>
               <h3
                 className={personalMenuState === 'projects'
                   ? 'activeMenu projectMenuItem'

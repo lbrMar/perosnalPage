@@ -84,9 +84,9 @@ const PokemonGame = () => {
           (
           <h1>POKE GAME</h1>
           )}
-        <div className='gameTrackerContainer'>
-          <h3 className='gameTrackerItem'>Score: {currentScore}</h3>
-          <h3 className='gameTrackerItem'>Level: {pokeLevel}</h3>
+    <div className='gameTrackerContainer'>
+      <h3 className='gameTrackerItem'>Score: {currentScore}</h3>
+      <h3 className='gameTrackerItem'>Level: {pokeLevel}</h3>
         </div>
       </div>
       <div className='pokeGameContainer'>
