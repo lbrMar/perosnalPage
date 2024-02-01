@@ -10,6 +10,22 @@
   backdrop-filter: blur(8px);
 }
 
+.carouselFlexContainer {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 450px) {
+  .carouselFlexContainer {
+    flex-direction: column;
+  }
+}
+
 .carouselImage {
   max-width: 400px;
   max-height: 400px;

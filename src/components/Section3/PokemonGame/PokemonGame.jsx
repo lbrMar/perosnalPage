@@ -1,14 +1,16 @@
-import './PokemonGame.css'
-import loremIpsum from '../../../utils/loremipsum.js'
-import chevronsLeft from '../../../assets/icons/featherIcons/chevrons-left.svg'
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import { usePokeGameContext } from '../../../context/PokeGameContext.jsx'
-import { useArcadeContext } from '../../../context/ArcadeContext.jsx'
+import './PokemonGame.css';
+import loremIpsum from '../../../utils/loremipsum.js';
+import chevronsLeft from '../../../assets/icons/featherIcons/chevrons-left.svg';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { usePokeGameContext } from '../../../context/PokeGameContext.jsx';
+import { useArcadeContext } from '../../../context/ArcadeContext.jsx';
+import { useWindowContext } from '../../../context/WindowContext.jsx';
 
 const PokemonGame = () => {
-  const [gameState, setGameState] = useState('menu')
-  const { setHighScore } = useArcadeContext()
+  const [gameState, setGameState] = useState('menu');
+  const { setHighScore } = useArcadeContext();
+  const { innerWidth } = useWindowContext();
   const {
     pokemonData,
     randPokeData,
@@ -21,49 +23,49 @@ const PokemonGame = () => {
     checkSelectedPokemon,
     checkLevel,
     shuffleOnClick
-  } = usePokeGameContext()
+  } = usePokeGameContext();
 
   const toggleGameOn = (pokemonData) => {
-    setGameState('game')
-    shufflePokeData(pokemonData)
-  }
+    setGameState('game');
+    shufflePokeData(pokemonData);
+  };
 
   const toggleMenu = () => {
-    setGameState('menu')
-  }
+    setGameState('menu');
+  };
 
   const toggleWinner = () => {
-    setGameState('winner')
-  }
+    setGameState('winner');
+  };
 
   const toggleLoser = () => {
-    setGameState('loser')
-  }
+    setGameState('loser');
+  };
 
   const onChevronClick = () => {
-    setCurrentScore(0)
-    setSelectedPokemon([])
-    setPokeLevel(1)
-  }
+    setCurrentScore(0);
+    setSelectedPokemon([]);
+    setPokeLevel(1);
+  };
 
   const onPokeClick = (event, pokemon) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const isGoodGuess = checkSelectedPokemon(pokemon)
+    const isGoodGuess = checkSelectedPokemon(pokemon);
 
     if (isGoodGuess === true) {
-      setCurrentScore((prev) => prev + 1)
-      checkLevel()
-      shuffleOnClick()
+      setCurrentScore((prev) => prev + 1);
+      checkLevel();
+      shuffleOnClick();
     } else {
-      const score = currentScore
-      setHighScore('pokemonGame', score)
-      setCurrentScore(0)
-      setPokeLevel(1)
-      setSelectedPokemon([])
-      toggleLoser()
+      const score = currentScore;
+      setHighScore('pokemonGame', score);
+      setCurrentScore(0);
+      setPokeLevel(1);
+      setSelectedPokemon([]);
+      toggleLoser();
     }
-  }
+  };
 
   return (
     <div className='pokemonGameMainContainer'>
@@ -78,7 +80,10 @@ const PokemonGame = () => {
             />
           </div>
         </Link>
-        <h1>POKE GAME</h1>
+        {innerWidth > 400 && 
+          (
+          <h1>POKE GAME</h1>
+          )}
         <div className='gameTrackerContainer'>
           <h3 className='gameTrackerItem'>Score: {currentScore}</h3>
           <h3 className='gameTrackerItem'>Level: {pokeLevel}</h3>
@@ -128,7 +133,7 @@ const PokemonGame = () => {
           )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PokemonGame
+export default PokemonGame;
