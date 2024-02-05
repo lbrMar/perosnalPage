@@ -1,20 +1,20 @@
-import './LandingPage.css';
-import asciiArt from '../../assets/landingImages/asciiArt';
-import jsIcon from '../../assets/icons/codingIcons/js.svg';
-import reactIcon from '../../assets/icons/codingIcons/react.svg';
-import nodeIcon from '../../assets/icons/codingIcons/node.svg';
-import mongoIcon from '../../assets/icons/codingIcons/mongo.png';
-import luaIcon from '../../assets/icons/codingIcons/lua.png';
-import rosePinePalette from '../../assets/icons/codingIcons/rosePinePalette.png';
-import rosePineDawnPalette from '../../assets/icons/codingIcons/rosePineDawnPalette.png';
-import { useDisplayMode } from '../../context';
+import './LandingPage.css'
+import asciiArt from '../../assets/landingImages/asciiArt'
+import jsIcon from '../../assets/icons/codingIcons/js.svg'
+import reactIcon from '../../assets/icons/codingIcons/react.svg'
+import nodeIcon from '../../assets/icons/codingIcons/node.svg'
+import mongoIcon from '../../assets/icons/codingIcons/mongo.png'
+import luaIcon from '../../assets/icons/codingIcons/lua.png'
+import rosePinePalette from '../../assets/icons/codingIcons/rosePinePalette.png'
+import rosePineDawnPalette from '../../assets/icons/codingIcons/rosePineDawnPalette.png'
+import { useDisplayMode } from '../../context'
 
 const LandingPage = () => {
-  const { displayMode } = useDisplayMode();
+  const { displayMode } = useDisplayMode()
 
   const asciiArtFormatted = asciiArt.split('\n').map((line) => (
     <pre>{line}</pre>
-  ));
+  ))
 
   return (
     <div className='landingPageContainer'>
@@ -44,26 +44,26 @@ const LandingPage = () => {
             <h5 className='landingTextSub'>rose-pine</h5>
           </div>
           <div className='paletteDisplay'>
-            {displayMode === 'light' ?
-              (
+            {displayMode === 'light'
+              ? (
                 <img
                   className='paletteIcon'
                   src={rosePineDawnPalette}
-                  alt='rose pine dawn palette' />
-              )
-              :
-              (
+                  alt='rose pine dawn palette'
+                />
+                )
+              : (
                 <img
                   className='paletteIcon'
                   src={rosePinePalette}
-                  alt='rose pine palette' />
-              )
-            }
+                  alt='rose pine palette'
+                />
+                )}
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage
